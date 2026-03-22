@@ -537,7 +537,7 @@ nav {
 }
 .cta-section .cta-sub {
   font-family: 'Caveat', cursive;
-  font-size: 26px; color: #FFD5D2;
+  font-size: 26px; color: #FFFFFF;
   margin-bottom: 32px;
 }
 .cta-section .btn {
@@ -548,7 +548,7 @@ nav {
 
 /* ===== FOOTER ===== */
 footer {
-  background: var(--ink); padding: 60px 24px 40px; color: #C4B5A6;
+  background: var(--ink); padding: 60px 24px 40px; color: #D9CEC5;
 }
 .footer-inner {
   max-width: 1100px; margin: 0 auto;
@@ -567,20 +567,20 @@ footer {
   display: block;
   font-weight: 700; font-size: 12px;
   text-transform: uppercase; letter-spacing: 2px;
-  color: #E8A49F; margin-bottom: 16px;
+  color: #F0C0BB; margin-bottom: 16px;
 }
 .footer-col a {
-  display: block; color: #C4B5A6;
+  display: block; color: #D9CEC5;
   text-decoration: none; font-size: 14px;
   margin-bottom: 8px; transition: color 0.2s;
 }
-.footer-col a:hover { color: #E8A49F; }
+.footer-col a:hover { color: #FFFFFF; }
 .footer-bottom {
   max-width: 1100px; margin: 40px auto 0;
   padding-top: 24px;
   border-top: 1px solid rgba(255,255,255,0.06);
   display: flex; justify-content: space-between;
-  font-size: 13px; color: #9A8D82;
+  font-size: 13px; color: #B5A99E;
   flex-wrap: wrap; gap: 8px;
 }
 
