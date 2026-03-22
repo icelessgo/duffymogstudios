@@ -689,7 +689,12 @@ footer {
 .blog-post .back-link:hover { color: var(--primary-deep); border-color: var(--primary-deep); }
 
 /* ===== HAMBURGER MENU ===== */
-.nav-toggle-checkbox { display: none; }
+.nav-toggle-checkbox { 
+  display: none !important; 
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 .nav-hamburger { display: none; cursor: pointer; z-index: 110; }
 .nav-hamburger span {
   display: block;
