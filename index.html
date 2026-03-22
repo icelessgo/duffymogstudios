@@ -125,6 +125,20 @@
     font-style: italic;
     color: var(--coral);
   }
+  @media (max-width: 600px) {
+    .rotating-wrapper { height: 2.3em; }
+    .rotating-text span { height: 2.3em; white-space: normal; }
+    @keyframes rotateWords {
+      0%, 8%    { transform: translateY(0); }
+      14.28%, 22.28%  { transform: translateY(-2.3em); }
+      28.56%, 36.56%  { transform: translateY(-4.6em); }
+      42.84%, 50.84%  { transform: translateY(-6.9em); }
+      57.12%, 65.12%  { transform: translateY(-9.2em); }
+      71.4%, 79.4%  { transform: translateY(-11.5em); }
+      85.68%, 93.68%  { transform: translateY(-13.8em); }
+      100%        { transform: translateY(-13.8em); }
+    }
+  }
   @keyframes rotateWords {
     0%, 8%    { transform: translateY(0); }
     14.28%, 22.28%  { transform: translateY(-1.15em); }
