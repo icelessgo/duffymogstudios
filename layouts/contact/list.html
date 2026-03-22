@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-intro">
+      <span class="contact-kicker handwritten">Let's create something beautiful</span>
+      <h1>Get in Touch</h1>
+      <p>Ready to tell your love story? Fill out the form below and I'll be in touch within 24 hours to chat about your big day.</p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name <span class="required">*</span></label>
+          <input type="text" id="first-name" name="first_name" required placeholder="Your first name">
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name <span class="required">*</span></label>
+          <input type="text" id="last-name" name="last_name" required placeholder="Your last name">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone <span class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" required placeholder="+353 ...">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="wedding-date">Wedding Date <span class="required">*</span></label>
+          <input type="date" id="wedding-date" name="wedding_date" required>
+        </div>
+        <div class="form-group">
+          <label for="venue">Wedding Venue</label>
+          <input type="text" id="venue" name="venue" placeholder="e.g. Cliff at Lyons">
+        </div>
+      </div>
+
+      <div class="form-group form-group-full">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your day — how you met, what you're dreaming of..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
+    </form>
+  </div>
+</section>
+{{ end }}

@@ -1,10 +1,30 @@
 <nav>
   <a href="{{ "" | absURL }}" class="nav-logo">DUFFY<span>MOG</span></a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle menu">
+  <label for="nav-toggle" class="nav-hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
   <div class="nav-links">
     <a href="{{ "" | absURL }}#work">Weddings</a>
     <a href="{{ "" | absURL }}#pricing">Pricing</a>
     <a href="{{ "" | absURL }}#about">About</a>
     <a href="{{ "blog/" | absURL }}">Blog</a>
-    <a href="{{ "" | absURL }}#contact" class="nav-cta">Say Hello!</a>
+    <a href="{{ "contact/" | absURL }}" class="nav-cta">Say Hello!</a>
   </div>
 </nav>
+
+<script>
+(function() {
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.querySelectorAll('.nav-links a');
+  links.forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggle.checked = false;
+    });
+  });
+})();
+</script>
