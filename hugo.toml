@@ -1,0 +1,9 @@
+baseURL = "https://icelessgo.github.io/duffymogstudios/"
+languageCode = "en-ie"
+title = "Duffymog Studios"
+
+[params]
+  description = "Wedding Photographer Dublin & Ireland"
+
+[markup.goldmark.renderer]
+  unsafe = true

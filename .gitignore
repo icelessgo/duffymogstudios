@@ -13,6 +13,11 @@ id_*
 .DS_Store
 Thumbs.db
 
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+
 # Editor files
 *.swp
 *.swo
