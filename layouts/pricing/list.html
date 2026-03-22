@@ -1,0 +1,101 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="pricing-hero reveal">
+  <div class="pricing-hero-inner">
+    <span class="pricing-kicker handwritten">Simple &amp; transparent</span>
+    <h1>Investment</h1>
+    <p>Honest pricing for couples who value real moments over posed perfection. Every package is crafted with care — no hidden fees, no awkward upsells, just beautiful photographs and a great experience.</p>
+  </div>
+</section>
+
+<!-- Package Cards -->
+<section class="pricing-packages reveal">
+  <div class="pricing-grid">
+
+    <div class="pricing-card">
+      <div class="pricing-card-icon">💒</div>
+      <h2>Wedding Photography</h2>
+      <div class="pricing-price handwritten">from €1,700 ✦</div>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> Full day coverage (getting ready to first dance)</li>
+        <li><span class="check">✓</span> Private online gallery</li>
+        <li><span class="check">✓</span> All images professionally edited</li>
+        <li><span class="check">✓</span> Nationwide travel included</li>
+        <li><span class="check">✓</span> No watermarks, full print rights</li>
+        <li><span class="check">✓</span> Second photographer available</li>
+      </ul>
+      <a href="/contact/" class="btn">Check Your Date →</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-card-icon">🌿</div>
+      <h2>Elopements</h2>
+      <div class="pricing-price handwritten">from €600 ✦</div>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> 2–8 hours coverage</li>
+        <li><span class="check">✓</span> Private online gallery</li>
+        <li><span class="check">✓</span> All images professionally edited</li>
+        <li><span class="check">✓</span> Greater Dublin Area travel included</li>
+        <li><span class="check">✓</span> Perfect for intimate ceremonies</li>
+      </ul>
+      <a href="/contact/" class="btn">Check Your Date →</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-card-icon">💛</div>
+      <h2>Engagements &amp; Portraits</h2>
+      <div class="pricing-price handwritten">from €400 ✦</div>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> 1–2 hour session</li>
+        <li><span class="check">✓</span> Private online gallery</li>
+        <li><span class="check">✓</span> All images professionally edited</li>
+        <li><span class="check">✓</span> Greater Dublin Area travel included</li>
+        <li><span class="check">✓</span> Bring the dog, kids, champagne!</li>
+      </ul>
+      <a href="/contact/" class="btn">Check Your Date →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- What's Included -->
+<section class="pricing-included reveal">
+  <div class="pricing-included-inner">
+    <h2>Every Package Includes</h2>
+    <div class="caveat-sub">the good stuff, always ✦</div>
+    <div class="included-grid">
+      <div class="included-item"><span class="check">✓</span> Private online gallery</div>
+      <div class="included-item"><span class="check">✓</span> Professionally edited images</div>
+      <div class="included-item"><span class="check">✓</span> Full print rights (no watermarks ever)</div>
+      <div class="included-item"><span class="check">✓</span> Pre-wedding consultation</div>
+      <div class="included-item"><span class="check">✓</span> €6.5M insurance coverage</div>
+      <div class="included-item"><span class="check">✓</span> Quick turnaround (4–6 weeks)</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section class="pricing-faq reveal">
+  <div class="pricing-faq-inner">
+    <h2>Frequently Asked Questions</h2>
+    <div class="caveat-sub">the answers you're looking for ✦</div>
+    <div class="faq-list">
+      {{ range .Params.faq }}
+      <details class="faq-item">
+        <summary class="faq-question">{{ .question }}</summary>
+        <div class="faq-answer"><p>{{ .answer }}</p></div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to check your date? ✦</h2>
+  <div class="cta-sub">Booking 2026 &amp; 2027 — dates going fast!</div>
+  <a href="/contact/" class="btn">Check Your Date →</a>
+</section>
+
+{{ end }}
