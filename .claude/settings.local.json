@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push:*)",
+      "Bash(gh api:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(snap list:*)",
+      "Bash(hugo new:*)",
+      "Bash(hugo)",
+      "Bash(git rm:*)",
+      "WebFetch(domain:www.duffymogstudios.ie)"
+    ]
+  }
+}
