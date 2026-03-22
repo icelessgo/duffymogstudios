@@ -563,7 +563,8 @@ footer {
   height: auto;
 }
 .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 300px; }
-.footer-col h4 {
+.footer-col-title {
+  display: block;
   font-weight: 700; font-size: 12px;
   text-transform: uppercase; letter-spacing: 2px;
   color: var(--primary); margin-bottom: 16px;
