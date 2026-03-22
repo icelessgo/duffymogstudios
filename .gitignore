@@ -1,0 +1,21 @@
+# SSH keys
+*.pem
+*.key
+githubssh
+githubssh.pub
+id_*
+
+# Environment / secrets
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
