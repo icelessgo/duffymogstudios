@@ -106,27 +106,27 @@ nav {
 /* Rotating text */
 .rotating-wrapper {
   display: inline-block; position: relative;
-  height: 1.15em; overflow: hidden; vertical-align: bottom;
+  height: var(--rotate-h, 1.15em); overflow: hidden; vertical-align: bottom;
 }
 .rotating-text {
   display: block;
-  animation: rotateWords 10.5s ease-in-out infinite;
+  animation: rotateWords 12s infinite;
 }
 .rotating-text span {
-  display: block; height: 1.15em;
+  display: block; height: var(--rotate-h, 1.15em);
   white-space: nowrap;
   font-style: italic;
   color: var(--coral);
 }
 @keyframes rotateWords {
-  0%, 8%    { transform: translateY(0); }
-  14.28%, 22.28%  { transform: translateY(-1.15em); }
-  28.56%, 36.56%  { transform: translateY(-2.30em); }
-  42.84%, 50.84%  { transform: translateY(-3.45em); }
-  57.12%, 65.12%  { transform: translateY(-4.60em); }
-  71.4%, 79.4%  { transform: translateY(-5.75em); }
-  85.68%, 93.68%  { transform: translateY(-6.90em); }
-  100%        { transform: translateY(-6.90em); }
+  0%, 10%       { transform: translateY(0); }
+  14.28%, 24.28%  { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); }
+  28.56%, 38.56%  { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); }
+  42.84%, 52.84%  { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); }
+  57.12%, 67.12%  { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); }
+  71.4%, 81.4%    { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); }
+  85.68%, 95.68%  { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); }
+  100%            { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); }
 }
 
 .hero-body {
@@ -891,8 +891,8 @@ footer {
   .masonry-item { margin-bottom: 10px; }
   .hero { padding: 100px 20px 60px; }
   .intro { padding: 60px 20px; }
-  .rotating-wrapper { height: 2.3em; }
-  .rotating-text span { height: 2.3em; white-space: normal; }
+  .rotating-wrapper { --rotate-h: 2.3em; height: var(--rotate-h); }
+  .rotating-text span { height: var(--rotate-h); white-space: normal; }
   .blog-section { padding: 100px 20px; }
   .blog-post { padding: 100px 20px 60px; }
 }
