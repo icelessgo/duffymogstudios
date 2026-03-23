@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="pricing-hero reveal">
+  <div class="pricing-hero-inner">
+    <span class="pricing-kicker handwritten">Everything you need to know</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>Can't find what you're looking for? <a href="/contact/">Drop me a message</a> and I'll get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<!-- FAQ List -->
+<section class="pricing-faq reveal">
+  <div class="pricing-faq-inner">
+    <div class="faq-list">
+      {{ range .Params.faq }}
+      <details class="faq-item">
+        <summary class="faq-question">{{ .question }}</summary>
+        <div class="faq-answer"><p>{{ .answer }}</p></div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to check your date? ✦</h2>
+  <div class="cta-sub">Booking 2026 &amp; 2027 — dates going fast!</div>
+  <a href="/contact/" class="btn">Check Your Date →</a>
+</section>
+
+{{ end }}
