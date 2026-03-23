@@ -465,6 +465,8 @@ nav {
   display: grid; grid-template-columns: 1fr 1fr;
   min-height: 550px;
 }
+.about-split--reverse .about-img-side { order: 2; }
+.about-split--reverse .about-text-side { order: 1; }
 .about-img-side {
   position: relative;
   background: var(--blush);
@@ -1138,6 +1140,8 @@ footer {
   .masonry { columns: 2; }
   .services-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
   .about-split { grid-template-columns: 1fr; }
+  .about-split--reverse .about-img-side { order: 0; }
+  .about-split--reverse .about-text-side { order: 0; }
   .about-img-side { min-height: 350px; }
   .about-text-side { padding: 40px 24px; }
   nav { padding: 14px 20px; }
