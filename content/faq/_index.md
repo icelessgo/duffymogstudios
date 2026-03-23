@@ -1,6 +1,6 @@
 ---
-title: "FAQs | Duffymog Studios"
-description: "Answers to the most common questions about booking Duffymog Studios for your wedding, elopement, or engagement photography in Dublin and across Ireland."
+title: "Wedding Photography FAQs"
+description: "Wedding photographer FAQs — everything you need to know about booking Duffymog Studios for your wedding, elopement, or engagement photography in Dublin and across Ireland."
 faq:
   - question: "What is your style of photography?"
     answer: "I try to achieve a best of both worlds with candids and documentary style throughout the day with some posed shots interspersed."
