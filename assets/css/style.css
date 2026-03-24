@@ -1219,7 +1219,7 @@ footer {
   .masonry-item { margin-bottom: 10px; }
   .hero { padding: 100px 20px 60px; }
   .intro { padding: 60px 20px; }
-  .rotating-wrapper { --rotate-h: 2.3em; height: var(--rotate-h); }
+  .rotating-wrapper { --rotate-h: clamp(68px, 2.3em, 90px); height: var(--rotate-h); }
   .rotating-text span { height: var(--rotate-h); white-space: normal; }
   .blog-section { padding: 100px 20px; }
   .blog-post { padding: 100px 20px 60px; }
