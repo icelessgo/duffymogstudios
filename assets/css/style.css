@@ -695,7 +695,7 @@ footer {
   opacity: 0;
   pointer-events: none;
 }
-.nav-hamburger { display: none; cursor: pointer; z-index: 110; padding: 5px; border-radius: 6px; background: rgba(255,248,245,0.9); }
+.nav-hamburger { display: none; cursor: pointer; z-index: 110; }
 .nav-hamburger span {
   display: block;
   width: 26px; height: 2px;
@@ -710,21 +710,20 @@ footer {
   .nav-links {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgb(255, 248, 245);
+    background: rgba(255, 248, 245, 0.98);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 32px;
-    visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
+    transition: opacity 0.35s ease;
     z-index: 105;
   }
   .nav-toggle-checkbox:checked ~ .nav-links {
     opacity: 1;
-    visibility: visible;
     pointer-events: all;
   }
   .nav-links a {
@@ -1129,53 +1128,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== MOBILE HERO VARIANTS (switch class on <section class="hero"> to test) ===== */
-
-/* --- Option A: Single photo above text --- */
-@media (max-width: 900px) {
-  .hero--mobile-a .hero-grid {
-    display: flex; flex-direction: column; text-align: center;
-  }
-  .hero--mobile-a .hero-text { order: 2; }
-  .hero--mobile-a .hero-images {
-    display: block; height: 280px; width: 100%;
-    position: relative; margin-bottom: 8px;
-  }
-  .hero--mobile-a .hero-img-2,
-  .hero--mobile-a .hero-img-3,
-  .hero--mobile-a .deco-star { display: none; }
-  .hero--mobile-a .hero-img-1 {
-    position: relative; top: auto; left: auto;
-    width: 100%; height: 280px;
-    transform: none; border-radius: 16px;
-  }
-  .hero--mobile-a .hero-buttons { justify-content: center; }
-}
-
-/* --- Option B: Photo strip (all 3 images in a horizontal row) --- */
-@media (max-width: 900px) {
-  .hero--mobile-b .hero-grid {
-    display: flex; flex-direction: column; text-align: center;
-  }
-  .hero--mobile-b .hero-images {
-    display: flex; flex-direction: row;
-    gap: 8px; height: 180px; width: 100%;
-    position: relative; margin-bottom: 8px;
-  }
-  .hero--mobile-b .deco-star { display: none; }
-  .hero--mobile-b .hero-img {
-    position: relative; top: auto; left: auto; right: auto; bottom: auto;
-    flex: 1; height: 180px; transform: none; border-radius: 12px;
-  }
-  .hero--mobile-b .hero-img-1,
-  .hero--mobile-b .hero-img-2,
-  .hero--mobile-b .hero-img-3 {
-    width: auto; height: 180px; transform: none;
-  }
-  .hero--mobile-b .hero-buttons { justify-content: center; }
-}
-
-/* --- Option C: Background image with text overlay --- */
+/* ===== MOBILE HERO ===== */
 @media (max-width: 900px) {
   .hero--mobile-c {
     position: relative; padding: 0 !important;
@@ -1229,8 +1182,7 @@ footer {
   .about-split { grid-template-columns: 1fr; }
   .about-img-side { min-height: 350px; }
   .about-text-side { padding: 40px 24px; }
-  nav { padding: 4px 12px; background: rgb(255, 248, 245); }
-  .nav-logo-img { width: 75px; }
+  nav { padding: 14px 20px; }
   .footer-inner { flex-direction: column; }
   .footer-bottom { flex-direction: column; }
   .contact-form { padding: 32px 24px; }
