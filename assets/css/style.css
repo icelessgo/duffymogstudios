@@ -1178,7 +1178,7 @@ footer {
   }
   .hero--mobile-c .hero-text { order: 2; }
   .hero--mobile-c .hero-kicker { color: #f5c5a3; }
-  .hero--mobile-c .hero-headline { color: #fff; font-size: clamp(32px, 8vw, 56px); }
+  .hero--mobile-c .hero-headline { color: #fff; font-size: clamp(32px, 8vw, 56px); margin-bottom: 8px; }
   .hero--mobile-c .rotating-text span { color: #f5a89a; }
   .hero--mobile-c .hero-body { color: rgba(255,255,255,0.85); }
   .hero--mobile-c .hero-body strong { color: #fff; }
