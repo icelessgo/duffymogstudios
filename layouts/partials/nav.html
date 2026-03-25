@@ -21,9 +21,9 @@
 
 <script>
 (function() {
-  var toggle = document.getElementById('nav-toggle');
-  var links = document.querySelectorAll('.nav-links a');
-  links.forEach(function(link) {
+  const toggle = document.getElementById('nav-toggle');
+  if (!toggle) return;
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
     link.addEventListener('click', function() {
       toggle.checked = false;
     });
