@@ -119,15 +119,15 @@ nav {
   color: var(--coral);
 }
 @keyframes rotateWords {
-  0%, 8.5%        { transform: translateY(0); }
-  12.5%, 20.5%    { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); }
-  25%, 33%        { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); }
-  37.5%, 45.5%    { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); }
-  50%, 58%        { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); }
-  62.5%, 70.5%    { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); }
-  75%, 83%        { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); }
-  87.5%, 95.5%    { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); }
-  100%            { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); }
+  0%, 10.5%       { transform: translateY(0); }
+  12.5%, 23%      { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); }
+  25%, 35.5%      { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); }
+  37.5%, 48%      { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); }
+  50%, 60.5%      { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); }
+  62.5%, 73%      { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); }
+  75%, 85.5%      { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); }
+  87.5%, 98%      { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); }
+  100%            { transform: translateY(calc(-8 * var(--rotate-h, 1.15em))); }
 }
 
 .hero-body {
