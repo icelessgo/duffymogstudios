@@ -9,7 +9,12 @@
       "Bash(hugo new:*)",
       "Bash(hugo)",
       "Bash(git rm:*)",
-      "WebFetch(domain:www.duffymogstudios.ie)"
+      "WebFetch(domain:www.duffymogstudios.ie)",
+      "Bash(cp \"DarverCastle.jpg\" \"darver-castle-wedding-blue-hour-veil.jpg\")",
+      "Bash(cp \"Grooms_Cinema.jpg\" \"two-grooms-cinema-portrait-ireland.jpg\")",
+      "Bash(cp \"Gabriela-Rapeseed-Field.jpg\" \"gabriela-duffy-wedding-photographer-ireland.jpg\")",
+      "Bash(cp \"GuestsLaughing.jpg\" \"wedding-guests-candid-moment-ireland.jpg\")",
+      "Bash(cp \"A-B-1-5.jpg\" \"couple-golden-hour-embrace-ireland.jpg\")"
     ]
   }
 }
