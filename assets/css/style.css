@@ -110,7 +110,7 @@ nav {
 }
 .rotating-text {
   display: block;
-  animation: rotateWords 12s infinite;
+  animation: rotateWords 16s infinite;
 }
 .rotating-text span {
   display: block; height: var(--rotate-h, 1.15em);
@@ -119,15 +119,23 @@ nav {
   color: var(--coral);
 }
 @keyframes rotateWords {
-  0%, 8.5%        { transform: translateY(0); }
-  12.5%, 20.5%    { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); }
-  25%, 33%        { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); }
-  37.5%, 45.5%    { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); }
-  50%, 58%        { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); }
-  62.5%, 70.5%    { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); }
-  75%, 83%        { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); }
-  87.5%, 95.5%    { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); }
-  100%            { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); }
+  0%      { transform: translateY(0); animation-timing-function: linear; }
+  6.25%   { transform: translateY(0); animation-timing-function: ease-in-out; }
+  9.4%    { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  15.6%   { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  18.75%  { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  25%     { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  28.1%   { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  34.4%   { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  37.5%   { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  43.75%  { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  46.9%   { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  53.1%   { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  56.25%  { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  62.5%   { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  65.6%   { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  96.9%   { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  100%    { transform: translateY(calc(-8 * var(--rotate-h, 1.15em))); }
 }
 
 .hero-body {
@@ -500,6 +508,13 @@ nav {
   text-align: center; padding: 20px;
   transform: rotate(-3deg);
   box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.about-img-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  border-radius: 20px;
+  padding: 0;
 }
 .about-img-side .float-star {
   position: absolute; font-size: 36px; color: var(--primary);
