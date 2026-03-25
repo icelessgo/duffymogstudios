@@ -110,7 +110,7 @@ nav {
 }
 .rotating-text {
   display: block;
-  animation: rotateWords 12s infinite;
+  animation: rotateWords 16s infinite;
 }
 .rotating-text span {
   display: block; height: var(--rotate-h, 1.15em);
@@ -119,23 +119,23 @@ nav {
   color: var(--coral);
 }
 @keyframes rotateWords {
-  0%    { transform: translateY(0); animation-timing-function: linear; }
-  8.5%  { transform: translateY(0); animation-timing-function: ease-in-out; }
-  12.5% { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  21%   { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  25%   { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  33.5% { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  37.5% { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  46%   { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  50%   { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  58.5% { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  62.5% { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  71%   { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  75%   { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  83.5% { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  87.5% { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
-  96%   { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
-  100%  { transform: translateY(calc(-8 * var(--rotate-h, 1.15em))); }
+  0%      { transform: translateY(0); animation-timing-function: linear; }
+  6.25%   { transform: translateY(0); animation-timing-function: ease-in-out; }
+  9.4%    { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  15.6%   { transform: translateY(calc(-1 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  18.75%  { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  25%     { transform: translateY(calc(-2 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  28.1%   { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  34.4%   { transform: translateY(calc(-3 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  37.5%   { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  43.75%  { transform: translateY(calc(-4 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  46.9%   { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  53.1%   { transform: translateY(calc(-5 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  56.25%  { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  62.5%   { transform: translateY(calc(-6 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  65.6%   { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); animation-timing-function: linear; }
+  96.9%   { transform: translateY(calc(-7 * var(--rotate-h, 1.15em))); animation-timing-function: ease-in-out; }
+  100%    { transform: translateY(calc(-8 * var(--rotate-h, 1.15em))); }
 }
 
 .hero-body {
