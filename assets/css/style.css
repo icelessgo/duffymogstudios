@@ -792,7 +792,8 @@ footer {
   transform: rotate(-2deg);
   margin-bottom: 12px;
 }
-.contact-intro h1 {
+.contact-intro h1,
+.contact-intro h2 {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(36px, 5vw, 56px);
   color: var(--charcoal);
