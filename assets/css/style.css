@@ -110,7 +110,7 @@ nav {
 }
 .rotating-text {
   display: block;
-  animation: rotateWords 16s infinite;
+  animation: rotateWords 17.6s infinite;
 }
 .rotating-text span {
   display: block; height: var(--rotate-h, 1.15em);
