@@ -5,5 +5,11 @@ title = "Duffymog Studios"
 [params]
   description = "Wedding Photographer Dublin & Ireland"
 
+[imaging]
+  quality = 90
+
+[imaging.exif]
+  disableLatLong = true
+
 [markup.goldmark.renderer]
   unsafe = true

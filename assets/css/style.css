@@ -1227,8 +1227,8 @@ footer {
   .pricing-faq { padding: 60px 20px; }
 }
 @media (max-width: 600px) {
-  .masonry { columns: 2; column-gap: 10px; }
-  .masonry-item { margin-bottom: 10px; }
+  .masonry { columns: 1; column-gap: 0; }
+  .masonry-item { margin-bottom: 14px; }
   .hero { padding: 100px 20px 60px; }
   .intro { padding: 60px 20px; }
   .rotating-wrapper { --rotate-h: clamp(68px, 2.3em, 90px); height: var(--rotate-h); }
