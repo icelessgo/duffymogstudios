@@ -34,4 +34,4 @@ As the evening unfolded and celebrations continued, every moment was meticulousl
 
 The National Gallery of Ireland is not just a venue — it's an extraordinary canvas where love stories come alive. It sets the stage for an unforgettable **Dublin wedding** experience, and I feel so lucky to capture these moments for my couples.
 
-**Dreaming of a wedding that blends art, history, and romance?** [Get in touch]({{< ref "/" >}}#contact) to check your date, or take a look at our [wedding packages]({{< ref "/" >}}#pricing).
+**Dreaming of a wedding that blends art, history, and romance?** [Get in touch](/contact/) to check your date, or take a look at our [wedding packages](/pricing/).
