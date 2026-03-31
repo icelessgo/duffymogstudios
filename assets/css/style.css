@@ -956,6 +956,14 @@ footer {
   font-size: 48px;
   margin-bottom: 16px;
 }
+.pricing-section-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  display: block;
+}
 .pricing-card h2 {
   font-family: 'DM Serif Display', serif;
   font-size: 26px;
