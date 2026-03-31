@@ -1,3 +1,13 @@
+{{ $ogImg := (resources.Get "images/couple-swoop.webp").Resize "1200x webp" }}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TMJWR9STF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8TMJWR9STF');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
@@ -7,7 +17,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:image" content="{{ "images/og-default.jpg" | absURL }}">
+<meta property="og:image" content="{{ $ogImg.Permalink }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -16,11 +26,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="twitter:image" content="{{ "images/og-default.jpg" | absURL }}">
+<meta name="twitter:image" content="{{ $ogImg.Permalink }}">
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
-<link rel="apple-touch-icon" href="{{ "favicon.svg" | relURL }}">
 <meta name="theme-color" content="#C83A32">
 
 <!-- Google Search Console: replace XXXXX with your verification code, then uncomment -->
@@ -48,7 +57,7 @@
   "name": "Duffymog Studios",
   "description": "{{ .Site.Params.description }}",
   "url": "{{ .Site.BaseURL }}",
-  "image": "{{ "images/og-default.jpg" | absURL }}",
+  "image": "{{ $ogImg.Permalink }}",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Dublin",
@@ -64,7 +73,8 @@
     "@type": "AggregateRating",
     "ratingValue": "5",
     "bestRating": "5",
-    "worstRating": "1"
+    "worstRating": "1",
+    "reviewCount": "29"
   }
 }
 </script>

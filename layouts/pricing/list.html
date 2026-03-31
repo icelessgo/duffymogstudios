@@ -53,7 +53,7 @@
 
 <!-- Elopement Packages -->
 <section class="pricing-packages reveal">
-  <img class="pricing-section-img" src="{{ "images/GlassonLakeHouseElope.webp" | relURL }}" alt="Elopement photography at Glasson Lakehouse, County Westmeath — intimate waterside ceremony in Ireland" loading="lazy" decoding="async">
+  {{ partial "responsive-img.html" (dict "src" "GlassonLakeHouseElope.webp" "alt" "Elopement photography at Glasson Lakehouse, County Westmeath — intimate waterside ceremony in Ireland" "class" "pricing-section-img" "sizes" "(max-width: 640px) 100vw, 900px" "widths" (slice 400 800 1200)) }}
   <div class="pricing-section-header">
     <h2>Elopements</h2>
   </div>
@@ -102,7 +102,7 @@
 
 <!-- Engagement & Portrait Packages -->
 <section class="pricing-packages reveal">
-  <img class="pricing-section-img" src="{{ "images/EngagementHerbertPark.webp" | relURL }}" alt="Engagement photography session at Herbert Park, Dublin — romantic couples portrait in the park" loading="lazy" decoding="async">
+  {{ partial "responsive-img.html" (dict "src" "EngagementHerbertPark.webp" "alt" "Engagement photography session at Herbert Park, Dublin — romantic couples portrait in the park" "class" "pricing-section-img" "sizes" "(max-width: 640px) 100vw, 900px" "widths" (slice 400 800 1200)) }}
   <div class="pricing-section-header">
     <h2>Engagements / Couple Shoots</h2>
   </div>

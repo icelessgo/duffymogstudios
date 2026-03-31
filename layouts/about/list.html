@@ -15,7 +15,7 @@
     <span class="float-star">✦</span>
     <span class="float-star">✦</span>
     <div class="about-img-frame">
-      [ Photo of Gabriela — camera in hand, laughing at a wedding ]
+      {{ partial "responsive-img.html" (dict "src" "gabriela-duffy-wedding-photographer-ireland.webp" "alt" "Gabriela Duffy, Dublin wedding photographer, in a rapeseed field in Ireland" "sizes" "(max-width: 640px) 100vw, 50vw" "widths" (slice 400 800 1200)) }}
     </div>
   </div>
   <div class="about-text-side">
@@ -32,7 +32,7 @@
   <div class="about-img-side">
     <span class="float-star">✦</span>
     <div class="about-img-frame">
-      [ Photo of Gabriela — behind the scenes, candid ]
+      {{ partial "responsive-img.html" (dict "src" "wedding-guests-candid-moment-ireland.webp" "alt" "Candid moment of wedding guests laughing, documentary wedding photography Ireland" "sizes" "(max-width: 640px) 100vw, 50vw" "widths" (slice 400 800 1200)) }}
     </div>
   </div>
   <div class="about-text-side">
@@ -52,21 +52,21 @@
   </div>
   <div class="services-grid">
     <div class="svc-card">
-      <div class="svc-card-img">🎞️</div>
+      <div class="svc-card-img">{{ partial "responsive-img.html" (dict "src" "GuestsLaughing.webp" "alt" "Candid moment of wedding guests laughing, documentary style" "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" "widths" (slice 400 800)) }}</div>
       <div class="svc-card-body">
         <h3>Documentary First</h3>
         <p>I follow your day, not a checklist. The goal is to <strong>capture what actually happens</strong> — the nerves, the relief, the chaos, the quiet moments in between — not to manufacture something that looks nice on Instagram.</p>
       </div>
     </div>
     <div class="svc-card">
-      <div class="svc-card-img">🤝</div>
+      <div class="svc-card-img">{{ partial "responsive-img.html" (dict "src" "couple-swoop.webp" "alt" "Romantic couple portrait, natural and relaxed, Poulaphouca House Wicklow" "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" "widths" (slice 400 800)) }}</div>
       <div class="svc-card-body">
         <h3>I Get to Know You First</h3>
         <p>Every couple gets a pre-wedding consultation so we actually know each other before the big day. <strong>Camera-shy? Tell me.</strong> Hate being centre of attention? Also fine. I'll work with you, not at you.</p>
       </div>
     </div>
     <div class="svc-card">
-      <div class="svc-card-img">🔍</div>
+      <div class="svc-card-img">{{ partial "responsive-img.html" (dict "src" "BridalPrepCandid.webp" "alt" "Candid bridal preparation detail moment, getting ready photography Ireland" "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" "widths" (slice 400 800)) }}</div>
       <div class="svc-card-body">
         <h3>The Details Matter</h3>
         <p>The dress tag with a note from your mum. Your gran doing something unhinged on the dancefloor. Your partner's face in the two seconds before they see you. <strong>I live for those shots.</strong> I will find them.</p>
@@ -79,7 +79,7 @@
 <section class="pricing-included reveal">
   <div class="pricing-included-inner">
     <h2>A Few Things About Me</h2>
-    <div class="caveat-sub" style="font-family: 'Caveat', cursive; font-size: 24px; color: var(--coral); margin-top: 4px;">the stuff that doesn't fit on a pricing page ✦</div>
+    <div class="caveat-sub">the stuff that doesn't fit on a pricing page ✦</div>
     <div class="included-grid included-grid--2col">
       <div class="included-item"><span class="check">🇪🇸</span> I'm half Spanish and speak it natively. Yes, I can photograph your Spanish relatives properly.</div>
       <div class="included-item"><span class="check">🔬</span> I have a Master's degree in Pharmaceutical Analysis. Photography was always the plan B that became plan A.</div>

@@ -5,7 +5,9 @@
   </div>
   <div class="services-grid">
     <div class="svc-card">
-      <div class="svc-card-img">💒</div>
+      <div class="svc-card-img">
+        {{ partial "responsive-img.html" (dict "src" "LD-744.webp" "alt" "Bride and groom embracing in golden hour light, Irish green countryside wedding" "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" "widths" (slice 400 800)) }}
+      </div>
       <div class="svc-card-body">
         <h3>Weddings</h3>
         <div class="price">from €1,700 ✦</div>
@@ -14,7 +16,9 @@
       </div>
     </div>
     <div class="svc-card">
-      <div class="svc-card-img"><img src="{{ "images/GlassonLakeHouseElope.webp" | relURL }}" alt="Elopement photography at Glasson Lakehouse, County Westmeath — intimate waterside ceremony in Ireland" loading="lazy" decoding="async"></div>
+      <div class="svc-card-img">
+        {{ partial "responsive-img.html" (dict "src" "GlassonLakeHouseElope.webp" "alt" "Elopement photography at Glasson Lakehouse, County Westmeath — intimate waterside ceremony in Ireland" "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" "widths" (slice 400 800)) }}
+      </div>
       <div class="svc-card-body">
         <h3>Elopements</h3>
         <div class="price">from €600 ✦</div>
@@ -23,7 +27,9 @@
       </div>
     </div>
     <div class="svc-card">
-      <div class="svc-card-img"><img src="{{ "images/EngagementHerbertPark.webp" | relURL }}" alt="Engagement photography session at Herbert Park, Dublin — couples portrait in natural surroundings" loading="lazy" decoding="async"></div>
+      <div class="svc-card-img">
+        {{ partial "responsive-img.html" (dict "src" "EngagementHerbertPark.webp" "alt" "Engagement photography session at Herbert Park, Dublin — couples portrait in natural surroundings" "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" "widths" (slice 400 800)) }}
+      </div>
       <div class="svc-card-body">
         <h3>Engagements</h3>
         <div class="price">from €400 ✦</div>

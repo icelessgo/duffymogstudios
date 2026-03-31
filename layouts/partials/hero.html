@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero hero--mobile-c">
   <div class="hero-grid">
     <div class="hero-text">
       <div class="hero-kicker">↳ Dublin & all of Ireland ✦</div>
@@ -14,6 +14,7 @@
             <span>the confetti moments</span>
             <span>the happy tears</span>
             <span>every kind of love</span>
+            <span>the romantics</span>
           </span>
         </span>
       </h1>
@@ -21,19 +22,19 @@
         <strong>No awkward posing. No boring photos.</strong> Just you two being ridiculously yourselves while I catch all the magic, the chaos, and the happy tears.
       </p>
       <div class="hero-buttons">
-        <a href="#contact-form" class="btn btn-primary">Check Your Date ✦</a>
+        <a href="#contact-form" class="btn btn-primary">Get in Touch ✦</a>
         <a href="#work" class="btn btn-outline">See the Work</a>
       </div>
     </div>
     <div class="hero-images">
       <div class="hero-img hero-img-1">
-        <img src="{{ "images/couple-swoop.jpg" | relURL }}" alt="Bride laughing with groom against Irish countryside backdrop" loading="eager">
+        {{ partial "responsive-img.html" (dict "src" "golden-hour-couple-oak-tree-ireland.webp" "alt" "Bride and groom sharing a golden hour moment under ancient oak tree, Irish country estate wedding" "loading" "eager" "fetchpriority" "high" "sizes" "(max-width: 640px) 45vw, 300px" "widths" (slice 300 600 900)) }}
       </div>
       <div class="hero-img hero-img-2">
-        <img src="{{ "images/confetti.jpg" | relURL }}" alt="Couple celebrating with confetti outside church" loading="eager">
+        {{ partial "responsive-img.html" (dict "src" "darver-castle-wedding-blue-hour-veil.webp" "alt" "Bride and groom at blue hour outside Darver Castle, wind-swept veil" "loading" "eager" "sizes" "(max-width: 640px) 35vw, 260px" "widths" (slice 300 600 900)) }}
       </div>
       <div class="hero-img hero-img-3">
-        <img src="{{ "images/poulaphouca-marquee.jpg" | relURL }}" alt="Intimate couple moment in marquee at Poulaphouca House" loading="eager">
+        {{ partial "responsive-img.html" (dict "src" "two-grooms-cinema-portrait-ireland.webp" "alt" "Two grooms laughing together in a cinema, Ireland" "loading" "eager" "sizes" "(max-width: 640px) 30vw, 240px" "widths" (slice 300 600 900)) }}
       </div>
       <div class="deco-star deco-star-1">✦</div>
       <div class="deco-star deco-star-2">✦</div>
