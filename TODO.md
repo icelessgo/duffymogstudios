@@ -3,7 +3,7 @@
 ## Needs content from you
 
 - [ ] **Add photos** — upload real images to replace placeholder divs in gallery, about page, and intro section
-- [ ] **Update testimonials** — add reviewer names and wedding venues to the 4 Google review cards (`layouts/partials/testimonial.html`)
+- [x] **Update testimonials** — add reviewer names and wedding venues to the 4 Google review cards (`layouts/partials/testimonial.html`)
 - [ ] **About page images** — replace the two `[ Photo of Gabriela... ]` placeholder blocks with real photos
 - [ ] **Alt text** — once photos are added, add descriptive alt text to each `<img>` tag
 - [ ] **Review pricing page** — confirm packages, prices, and inclusions are final
