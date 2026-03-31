@@ -451,12 +451,13 @@ nav {
 }
 .svc-card-img {
   height: 200px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 48px;
+  overflow: hidden;
 }
-.svc-card:nth-child(1) .svc-card-img { background: var(--primary-glow); }
-.svc-card:nth-child(2) .svc-card-img { background: var(--sage-light); }
-.svc-card:nth-child(3) .svc-card-img { background: var(--blush); }
+.svc-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+}
 .svc-card-body {
   padding: 24px;
 }
