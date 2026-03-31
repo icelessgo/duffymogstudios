@@ -711,8 +711,7 @@ footer {
   .nav-links {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 248, 245, 0.98);
-    backdrop-filter: blur(20px);
+    background: #fff8f5;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1186,7 +1185,8 @@ footer {
   .about-split--reverse .about-text-side { order: 0; }
   .about-img-side { min-height: 350px; }
   .about-text-side { padding: 40px 24px; }
-  nav { padding: 14px 20px; }
+  nav { padding: 10px 14px; }
+  .nav-logo-img { width: 105px; }
   .footer-inner { flex-direction: column; }
   .footer-bottom { flex-direction: column; }
   .contact-form { padding: 32px 24px; }
