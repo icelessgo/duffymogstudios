@@ -1,3 +1,4 @@
+{{ $ogImg := (resources.Get "images/couple-swoop.webp").Resize "1200x webp" }}
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TMJWR9STF"></script>
 <script>
@@ -16,7 +17,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:image" content="{{ "images/couple-swoop.webp" | absURL }}">
+<meta property="og:image" content="{{ $ogImg.Permalink }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -25,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="twitter:image" content="{{ "images/couple-swoop.webp" | absURL }}">
+<meta name="twitter:image" content="{{ $ogImg.Permalink }}">
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
@@ -56,7 +57,7 @@
   "name": "Duffymog Studios",
   "description": "{{ .Site.Params.description }}",
   "url": "{{ .Site.BaseURL }}",
-  "image": "{{ "images/couple-swoop.webp" | absURL }}",
+  "image": "{{ $ogImg.Permalink }}",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Dublin",

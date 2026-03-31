@@ -1,0 +1,38 @@
+{{/*
+  Renders a responsive <img> using Hugo's build-time image pipeline.
+
+  Params:
+    src            string   Filename in assets/images/ (required)
+    alt            string   Alt text (required)
+    loading        string   "lazy" (default) or "eager"
+    fetchpriority  string   "high", "low", or "auto" (optional)
+    sizes          string   CSS sizes attribute
+    class          string   Optional CSS class
+    widths         []int    Widths to generate — default: [400 800 1400]
+*/}}
+{{ $src    := .src }}
+{{ $alt    := .alt }}
+{{ $load   := .loading | default "lazy" }}
+{{ $fp     := .fetchpriority | default "" }}
+{{ $class  := .class | default "" }}
+{{ $sizes  := .sizes  | default "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px" }}
+{{ $widths := .widths | default (slice 400 800 1400) }}
+
+{{ $img := resources.Get (printf "images/%s" $src) }}
+{{ if $img }}
+  {{ $fallback := $img.Resize "800x webp" }}
+  {{ $parts := slice }}
+  {{ range $widths }}
+    {{ $r := $img.Resize (printf "%dx webp" .) }}
+    {{ $parts = $parts | append (printf "%s %dw" $r.RelPermalink .) }}
+  {{ end }}
+  <img
+    src="{{ $fallback.RelPermalink }}"
+    srcset="{{ delimit $parts ", " }}"
+    sizes="{{ $sizes }}"
+    width="{{ $fallback.Width }}"
+    height="{{ $fallback.Height }}"
+    alt="{{ $alt }}"
+    loading="{{ $load }}"
+    decoding="async"{{ with $fp }} fetchpriority="{{ . }}"{{ end }}{{ with $class }} class="{{ . }}"{{ end }}>
+{{ end }}

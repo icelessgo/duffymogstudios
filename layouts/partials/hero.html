@@ -28,25 +28,25 @@
     </div>
     <div class="hero-images">
       <div class="hero-img hero-img-1">
-        <img class="hero-carousel-slide active" src="{{ "images/golden-hour-couple-oak-tree-ireland.webp" | relURL }}" alt="Bride and groom sharing a golden hour moment under ancient oak tree, Irish country estate wedding" loading="eager" fetchpriority="high" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/first-dance-marquee-fairy-lights-ireland.webp" | relURL }}" alt="First dance under fairy lights in a marquee, Irish wedding" loading="lazy" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/confetti.webp" | relURL }}" alt="Confetti moment outside church, Irish wedding celebration" loading="lazy" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/IMG-3633.webp" | relURL }}" alt="Couple embracing during golden hour, Ireland" loading="lazy" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/CA-884.webp" | relURL }}" alt="Couple eloping at Glasson Lake House, Ireland" loading="lazy" width="260" height="340">
+        {{ partial "responsive-img.html" (dict "src" "golden-hour-couple-oak-tree-ireland.webp" "alt" "Bride and groom sharing a golden hour moment under ancient oak tree, Irish country estate wedding" "loading" "eager" "fetchpriority" "high" "class" "hero-carousel-slide active" "sizes" "(max-width: 640px) 45vw, 300px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "first-dance-marquee-fairy-lights-ireland.webp" "alt" "First dance under fairy lights in a marquee, Irish wedding" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 45vw, 300px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "confetti.webp" "alt" "Confetti moment outside church, Irish wedding celebration" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 45vw, 300px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "IMG-3633.webp" "alt" "Couple embracing during golden hour, Ireland" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 45vw, 300px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "CA-884.webp" "alt" "Couple eloping at Glasson Lake House, Ireland" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 45vw, 300px" "widths" (slice 300 600 900)) }}
       </div>
       <div class="hero-img hero-img-2">
-        <img class="hero-carousel-slide active" src="{{ "images/darver-castle-wedding-blue-hour-veil.webp" | relURL }}" alt="Bride and groom at blue hour outside Darver Castle, wind-swept veil" loading="eager" width="220" height="300">
-        <img class="hero-carousel-slide" src="{{ "images/Dancefloor3.webp" | relURL }}" alt="First dance under fairy lights in a marquee, Irish wedding" loading="lazy" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/Grooms&Dogs2.webp" | relURL }}" alt="Confetti moment outside church, Irish wedding celebration" loading="lazy" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/B-D-217.webp" | relURL }}" alt="Couple embracing during golden hour, Ireland" loading="lazy" width="260" height="340">
-        <img class="hero-carousel-slide" src="{{ "images/GlassonLakeHouseElope.webp" | relURL }}" alt="Couple eloping at Glasson Lake House, Ireland" loading="lazy" width="260" height="340">
+        {{ partial "responsive-img.html" (dict "src" "darver-castle-wedding-blue-hour-veil.webp" "alt" "Bride and groom at blue hour outside Darver Castle, wind-swept veil" "loading" "eager" "class" "hero-carousel-slide active" "sizes" "(max-width: 640px) 35vw, 260px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "Dancefloor3.webp" "alt" "First dance under fairy lights in a marquee, Irish wedding" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 35vw, 260px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "Grooms&Dogs2.webp" "alt" "Two grooms with their dogs at an Irish wedding" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 35vw, 260px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "B-D-217.webp" "alt" "Couple embracing during golden hour, Ireland" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 35vw, 260px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "GlassonLakeHouseElope.webp" "alt" "Couple eloping at Glasson Lake House, Ireland" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 35vw, 260px" "widths" (slice 300 600 900)) }}
       </div>
       <div class="hero-img hero-img-3">
-        <img class="hero-carousel-slide active" src="{{ "images/two-grooms-cinema-portrait-ireland.webp" | relURL }}" alt="Two grooms laughing together in a cinema, Ireland" loading="eager" width="200" height="260">
-        <img class="hero-carousel-slide" src="{{ "images/BridePortrait.webp" | relURL }}" alt="Bride portrait, Irish wedding" loading="lazy" width="200" height="260">
-        <img class="hero-carousel-slide" src="{{ "images/poulaphouca-marquee.webp" | relURL }}" alt="Groom portrait on bridge, Irish wedding" loading="lazy" width="200" height="260">
-        <img class="hero-carousel-slide" src="{{ "images/Engagement.webp" | relURL }}" alt="Engagement portrait, Ireland" loading="lazy" width="200" height="260">
-        <img class="hero-carousel-slide" src="{{ "images/BrideShelbourneHotel.webp" | relURL }}" alt="bridesmaids getting bride ready" loading="lazy" width="200" height="260">
+        {{ partial "responsive-img.html" (dict "src" "two-grooms-cinema-portrait-ireland.webp" "alt" "Two grooms laughing together in a cinema, Ireland" "loading" "eager" "class" "hero-carousel-slide active" "sizes" "(max-width: 640px) 30vw, 240px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "BridePortrait.webp" "alt" "Bride portrait, Irish wedding" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 30vw, 240px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "poulaphouca-marquee.webp" "alt" "Poulaphouca House marquee wedding, Wicklow" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 30vw, 240px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "Engagement.webp" "alt" "Engagement portrait, Ireland" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 30vw, 240px" "widths" (slice 300 600 900)) }}
+        {{ partial "responsive-img.html" (dict "src" "BrideShelbourneHotel.webp" "alt" "Bridesmaids getting bride ready, Shelbourne Hotel Dublin" "class" "hero-carousel-slide" "sizes" "(max-width: 640px) 30vw, 240px" "widths" (slice 300 600 900)) }}
       </div>
       <div class="deco-star deco-star-1">✦</div>
       <div class="deco-star deco-star-2">✦</div>
