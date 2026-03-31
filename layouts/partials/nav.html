@@ -10,6 +10,7 @@
 </nav>
 
 <div class="nav-links" id="nav-links">
+  <button class="nav-close" aria-label="Close menu">✕</button>
   <a href="{{ "" | absURL }}#work">Weddings</a>
   <a href="{{ "pricing/" | absURL }}">Pricing</a>
   <a href="{{ "about/" | absURL }}">About</a>
@@ -23,18 +24,22 @@
   var links = document.getElementById('nav-links');
   if (!btn || !links) return;
 
+  function closeMenu() {
+    links.classList.remove('nav-open');
+    btn.classList.remove('nav-open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
   btn.addEventListener('click', function() {
     var open = links.classList.toggle('nav-open');
     btn.classList.toggle('nav-open', open);
     btn.setAttribute('aria-expanded', String(open));
   });
 
+  document.querySelector('.nav-close').addEventListener('click', closeMenu);
+
   links.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      links.classList.remove('nav-open');
-      btn.classList.remove('nav-open');
-      btn.setAttribute('aria-expanded', 'false');
-    });
+    a.addEventListener('click', closeMenu);
   });
 })();
 </script>

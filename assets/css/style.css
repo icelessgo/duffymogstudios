@@ -733,6 +733,12 @@ footer {
     font-size: 18px !important;
     letter-spacing: 2px;
   }
+  .nav-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 22px; color: var(--charcoal);
+    padding: 8px; line-height: 1;
+  }
   .nav-hamburger.nav-open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
   }
