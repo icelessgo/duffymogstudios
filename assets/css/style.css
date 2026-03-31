@@ -697,6 +697,7 @@ footer {
   display: none; cursor: pointer; z-index: 110;
   background: none; border: none; padding: 4px;
 }
+.nav-close { display: none; }
 .nav-hamburger span {
   display: block;
   width: 26px; height: 2px;
@@ -738,6 +739,7 @@ footer {
     background: none; border: none; cursor: pointer;
     font-size: 22px; color: var(--charcoal);
     padding: 8px; line-height: 1;
+    display: block;
   }
   .nav-hamburger.nav-open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
