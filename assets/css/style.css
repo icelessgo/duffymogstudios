@@ -1186,7 +1186,7 @@ footer {
   .about-split--reverse .about-text-side { order: 0; }
   .about-img-side { min-height: 350px; }
   .about-text-side { padding: 40px 24px; }
-  nav { padding: 10px 14px; }
+  nav { padding: 10px 14px; background: #fff8f5; backdrop-filter: none; }
   .nav-logo-img { width: 105px; }
   .footer-inner { flex-direction: column; }
   .footer-bottom { flex-direction: column; }
