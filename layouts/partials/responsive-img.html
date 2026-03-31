@@ -20,10 +20,10 @@
 
 {{ $img := resources.Get (printf "images/%s" $src) }}
 {{ if $img }}
-  {{ $fallback := $img.Resize "800x webp" }}
+  {{ $fallback := $img.Resize "800x webp q90" }}
   {{ $parts := slice }}
   {{ range $widths }}
-    {{ $r := $img.Resize (printf "%dx webp" .) }}
+    {{ $r := $img.Resize (printf "%dx webp q90" .) }}
     {{ $parts = $parts | append (printf "%s %dw" $r.RelPermalink .) }}
   {{ end }}
   <img
