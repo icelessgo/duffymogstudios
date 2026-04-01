@@ -2,7 +2,7 @@
   <div class="contact-container">
     <div class="contact-intro">
       <span class="contact-kicker handwritten">Let's create something beautiful</span>
-      <h2>Get in Touch</h2>
+      {{ if and .IsSection (eq .Section "contact") }}<h1>Get in Touch</h1>{{ else }}<h2>Get in Touch</h2>{{ end }}
       <p>Ready to tell your love story? Fill out the form below and I'll be in touch within 24 hours to chat about your big day.</p>
     </div>
 

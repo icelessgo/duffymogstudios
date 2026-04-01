@@ -1,4 +1,5 @@
 {{ if .IsHome }}
+{{ $schemaImg := (resources.Get "images/couple-swoop.jpg").Resize "1200x webp q90" }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -6,8 +7,8 @@
   "name": "Duffymog Studios",
   "description": "{{ .Site.Params.description }}",
   "url": "{{ .Site.BaseURL }}",
-  "image": "{{ (resources.Get "images/couple-swoop.webp").Permalink }}",
-  "telephone": "",
+  "image": "{{ $schemaImg.Permalink }}",
+  "additionalType": "https://schema.org/Photographer",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Dublin",
@@ -23,6 +24,13 @@
     "name": "Ireland"
   },
   "priceRange": "€400-€2,100",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "29"
+  },
   "sameAs": [
     "https://instagram.com/duffymogstudios"
   ]

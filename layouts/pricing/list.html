@@ -10,29 +10,12 @@
 </section>
 
 <!-- Wedding Packages -->
-<section class="pricing-packages reveal">
-  <div class="pricing-section-header">
-    <div class="pricing-card-icon">💒</div>
-    <h2>Wedding Photography</h2>
+<section class="pricing-split reveal">
+  <div class="pricing-split-img">
+    {{ partial "responsive-img.html" (dict "src" "WeddingMillhouse.jpg" "alt" "Wedding reception at the Millhouse, Slane, County Meath" "sizes" "(max-width: 640px) 100vw, 550px" "widths" (slice 400 800)) }}
   </div>
-  <div class="pricing-grid pricing-grid-2">
-
-    <div class="pricing-card pricing-card-featured">
-      <div class="pricing-card-badge handwritten">Most Popular ✦</div>
-      <h3>Full Day Coverage</h3>
-      <div class="pricing-price handwritten">€2,100</div>
-      <ul class="pricing-features">
-        <li><span class="check">✓</span> Morning preparations until first dance</li>
-        <li><span class="check">✓</span> Approximately 800 photos</li>
-        <li><span class="check">✓</span> Private online gallery</li>
-        <li><span class="check">✓</span> All images professionally edited</li>
-        <li><span class="check">✓</span> Nationwide travel included</li>
-        <li><span class="check">✓</span> No watermarks, full print rights</li>
-      </ul>
-      <div class="pricing-addon"><span class="check">+</span> Second photographer: €800</div>
-      <a href="/contact/" class="btn btn-primary">Check Your Date →</a>
-    </div>
-
+  <div class="pricing-split-content">
+    <h2 class="pricing-split-heading">Wedding Photography</h2>
     <div class="pricing-card">
       <h3>Until Dinner Coverage</h3>
       <div class="pricing-price handwritten">€1,700</div>
@@ -45,20 +28,36 @@
         <li><span class="check">✓</span> No watermarks, full print rights</li>
       </ul>
       <div class="pricing-addon"><span class="check">+</span> Second photographer: €600</div>
-      <a href="/contact/" class="btn">Check Your Date →</a>
+      <a href="/contact/" class="btn btn-outline">Check Your Date →</a>
     </div>
-
+    <details class="pricing-expand">
+      <summary class="pricing-expand-toggle">Also available: Full Day Coverage</summary>
+      <div class="pricing-card pricing-card-featured">
+        <div class="pricing-card-badge handwritten">Most Popular ✦</div>
+        <h3>Full Day Coverage</h3>
+        <div class="pricing-price handwritten">€2,100</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Morning preparations until first dance</li>
+          <li><span class="check">✓</span> Approximately 800 photos</li>
+          <li><span class="check">✓</span> Private online gallery</li>
+          <li><span class="check">✓</span> All images professionally edited</li>
+          <li><span class="check">✓</span> Nationwide travel included</li>
+          <li><span class="check">✓</span> No watermarks, full print rights</li>
+        </ul>
+        <div class="pricing-addon"><span class="check">+</span> Second photographer: €800</div>
+        <a href="/contact/" class="btn btn-primary">Check Your Date →</a>
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- Elopement Packages -->
-<section class="pricing-packages reveal">
-  {{ partial "responsive-img.html" (dict "src" "GlassonLakeHouseElope.webp" "alt" "Elopement photography at Glasson Lakehouse, County Westmeath — intimate waterside ceremony in Ireland" "class" "pricing-section-img" "sizes" "(max-width: 640px) 100vw, 900px" "widths" (slice 400 800 1200)) }}
-  <div class="pricing-section-header">
-    <h2>Elopements</h2>
+<section class="pricing-split pricing-split--reverse reveal">
+  <div class="pricing-split-img">
+    {{ partial "responsive-img.html" (dict "src" "GlassonLakeHouseElope.jpg" "alt" "Elopement photography at Glasson Lakehouse, County Westmeath — intimate waterside ceremony in Ireland" "sizes" "(max-width: 640px) 100vw, 550px" "widths" (slice 400 800)) }}
   </div>
-  <div class="pricing-grid">
-
+  <div class="pricing-split-content">
+    <h2 class="pricing-split-heading">Elopements</h2>
     <div class="pricing-card">
       <h3>Silver</h3>
       <div class="pricing-price handwritten">€600</div>
@@ -68,46 +67,45 @@
         <li><span class="check">✓</span> All images professionally edited</li>
         <li><span class="check">✓</span> Greater Dublin Area travel included</li>
       </ul>
-      <a href="/contact/" class="btn">Check Your Date →</a>
+      <a href="/contact/" class="btn btn-outline">Check Your Date →</a>
     </div>
-
-    <div class="pricing-card">
-      <h3>Gold</h3>
-      <div class="pricing-price handwritten">€1,000</div>
-      <ul class="pricing-features">
-        <li><span class="check">✓</span> 4 hour photoshoot</li>
-        <li><span class="check">✓</span> Private online gallery with ~200 photos</li>
-        <li><span class="check">✓</span> All images professionally edited</li>
-        <li><span class="check">✓</span> Greater Dublin Area travel included</li>
-      </ul>
-      <a href="/contact/" class="btn">Check Your Date →</a>
-    </div>
-
-    <div class="pricing-card pricing-card-featured">
-      <div class="pricing-card-badge handwritten">Best Value ✦</div>
-      <h3>Platinum</h3>
-      <div class="pricing-price handwritten">€1,600</div>
-      <ul class="pricing-features">
-        <li><span class="check">✓</span> 6 hour photoshoot</li>
-        <li><span class="check">✓</span> Private online gallery with ~350 photos</li>
-        <li><span class="check">✓</span> All images professionally edited</li>
-        <li><span class="check">✓</span> Travel within Ireland</li>
-        <li><span class="check">✓</span> Physical photo album included</li>
-      </ul>
-      <a href="/contact/" class="btn btn-primary">Check Your Date →</a>
-    </div>
-
+    <details class="pricing-expand">
+      <summary class="pricing-expand-toggle">See larger packages</summary>
+      <div class="pricing-card pricing-card-featured">
+        <div class="pricing-card-badge handwritten">Best Value ✦</div>
+        <h3>Gold</h3>
+        <div class="pricing-price handwritten">€1,000</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 4 hour photoshoot</li>
+          <li><span class="check">✓</span> Private online gallery with ~200 photos</li>
+          <li><span class="check">✓</span> All images professionally edited</li>
+          <li><span class="check">✓</span> Greater Dublin Area travel included</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Check Your Date →</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Platinum</h3>
+        <div class="pricing-price handwritten">€1,600</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 6 hour photoshoot</li>
+          <li><span class="check">✓</span> Private online gallery with ~350 photos</li>
+          <li><span class="check">✓</span> All images professionally edited</li>
+          <li><span class="check">✓</span> Travel within Ireland</li>
+          <li><span class="check">✓</span> Physical photo album included</li>
+        </ul>
+        <a href="/contact/" class="btn btn-outline">Check Your Date →</a>
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- Engagement & Portrait Packages -->
-<section class="pricing-packages reveal">
-  {{ partial "responsive-img.html" (dict "src" "EngagementHerbertPark.webp" "alt" "Engagement photography session at Herbert Park, Dublin — romantic couples portrait in the park" "class" "pricing-section-img" "sizes" "(max-width: 640px) 100vw, 900px" "widths" (slice 400 800 1200)) }}
-  <div class="pricing-section-header">
-    <h2>Engagements / Couple Shoots</h2>
+<section class="pricing-split reveal">
+  <div class="pricing-split-img">
+    {{ partial "responsive-img.html" (dict "src" "EngagementHerbertPark.jpg" "alt" "Engagement photography session at Herbert Park, Dublin — romantic couples portrait in the park" "sizes" "(max-width: 640px) 100vw, 550px" "widths" (slice 400 800)) }}
   </div>
-  <div class="pricing-grid pricing-grid-2">
-
+  <div class="pricing-split-content">
+    <h2 class="pricing-split-heading">Engagements / Couple Shoots</h2>
     <div class="pricing-card">
       <h3>The Candid</h3>
       <div class="pricing-price handwritten">€400</div>
@@ -118,21 +116,22 @@
         <li><span class="check">✓</span> All images professionally edited</li>
         <li><span class="check">✓</span> Greater Dublin Area travel included</li>
       </ul>
-      <a href="/contact/" class="btn">Check Your Date →</a>
+      <a href="/contact/" class="btn btn-outline">Check Your Date →</a>
     </div>
-
-    <div class="pricing-card">
-      <h3>The Planned It</h3>
-      <div class="pricing-price handwritten">€600</div>
-      <ul class="pricing-features">
-        <li><span class="check">✓</span> 2 hour posed shoot</li>
-        <li><span class="check">✓</span> Approx 100 photos</li>
-        <li><span class="check">✓</span> All images professionally edited</li>
-        <li><span class="check">✓</span> Greater Dublin Area travel included</li>
-      </ul>
-      <a href="/contact/" class="btn">Check Your Date →</a>
-    </div>
-
+    <details class="pricing-expand">
+      <summary class="pricing-expand-toggle">Also available: The Planned It</summary>
+      <div class="pricing-card">
+        <h3>The Planned It</h3>
+        <div class="pricing-price handwritten">€600</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 2 hour posed shoot</li>
+          <li><span class="check">✓</span> Approx 100 photos</li>
+          <li><span class="check">✓</span> All images professionally edited</li>
+          <li><span class="check">✓</span> Greater Dublin Area travel included</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Check Your Date →</a>
+      </div>
+    </details>
   </div>
 </section>
 

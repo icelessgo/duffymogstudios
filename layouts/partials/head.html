@@ -1,17 +1,9 @@
-{{ $ogImg := (resources.Get "images/couple-swoop.webp").Resize "1200x webp q90" }}
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TMJWR9STF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8TMJWR9STF');
-</script>
-
+{{ $ogImg := (resources.Get "images/couple-swoop.jpg").Resize "1200x webp q90" }}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="author" content="Gabriela Duffy, Duffymog Studios">
 <link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Open Graph -->
@@ -21,6 +13,7 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_IE">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -28,75 +21,27 @@
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ $ogImg.Permalink }}">
 
+<!-- Geo targeting -->
+<meta name="geo.region" content="IE-D">
+<meta name="geo.placename" content="Dublin">
+
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
 <meta name="theme-color" content="#C83A32">
 
-<!-- Google Search Console: replace XXXXX with your verification code, then uncomment -->
-<!-- <meta name="google-site-verification" content="XXXXX"> -->
-
-<!-- Analytics: uncomment one when ready -->
-<!-- Plausible (privacy-friendly, no cookie banner needed): -->
-<!-- <script defer data-domain="duffymogstudios.ie" src="https://plausible.io/js/script.js"></script> -->
-<!-- Google Analytics (requires cookie consent banner): -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
-
 <!-- Fonts: preconnect + preload CSS to break chain -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Playwrite+IE&family=DM+Serif+Display:ital@0;1&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Playwrite+IE&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Playwrite+IE&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"></noscript>
 {{ $style := resources.Get "css/style.css" }}<style>{{ $style.Content | safeCSS }}</style>
 
-<!-- Schema.org LocalBusiness -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Duffymog Studios",
-  "description": "{{ .Site.Params.description }}",
-  "url": "{{ .Site.BaseURL }}",
-  "image": "{{ $ogImg.Permalink }}",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Dublin",
-    "addressCountry": "IE"
-  },
-  "priceRange": "€€€",
-  "additionalType": "https://schema.org/Photographer",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Ireland"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "worstRating": "1",
-    "reviewCount": "29"
-  }
-}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TMJWR9STF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8TMJWR9STF');
 </script>
-
-{{ if .Params.faq }}
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {{ range $i, $item := .Params.faq }}{{ if $i }},{{ end }}
-    {
-      "@type": "Question",
-      "name": "{{ $item.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ $item.answer }}"
-      }
-    }
-    {{ end }}
-  ]
-}
-</script>
-{{ end }}
