@@ -1,0 +1,93 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Duffymog Studios",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "image": "{{ (resources.Get "images/couple-swoop.webp").Permalink }}",
+  "telephone": "",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dublin",
+    "addressCountry": "IE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "53.3498",
+    "longitude": "-6.2603"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Ireland"
+  },
+  "priceRange": "€400-€2,100",
+  "sameAs": [
+    "https://instagram.com/duffymogstudios"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Duffymog Studios",
+  "description": "Candid, documentary-style wedding photography by Gabriela Duffy. Based in Dublin, travelling all of Ireland.",
+  "url": "{{ .Site.BaseURL }}",
+  "provider": {
+    "@type": "Person",
+    "name": "Gabriela Duffy",
+    "jobTitle": "Wedding Photographer"
+  },
+  "serviceType": ["Wedding Photography", "Elopement Photography", "Engagement Photography"],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Ireland"
+  }
+}
+</script>
+{{ end }}
+
+{{ if .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $faq := .Params.faq }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ .question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ .answer | jsonify }}
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{ if and .IsPage (eq .Section "blog") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Gabriela Duffy"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Duffymog Studios",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "mainEntityOfPage": "{{ .Permalink }}"
+}
+</script>
+{{ end }}
