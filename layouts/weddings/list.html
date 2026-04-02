@@ -76,7 +76,7 @@
   <div class="masonry">
     {{ range first $half $shuffled }}
       <div class="masonry-item">
-        {{ partial "responsive-img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 900px) 50vw, 360px" "widths" (slice 400 800)) }}
+        {{ partial "responsive-img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 900px) 50vw, 360px" "widths" (slice 400 600 800)) }}
       </div>
     {{ end }}
   </div>
@@ -98,7 +98,7 @@
   <div class="masonry">
     {{ range after $half $shuffled }}
       <div class="masonry-item">
-        {{ partial "responsive-img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 900px) 50vw, 360px" "widths" (slice 400 800)) }}
+        {{ partial "responsive-img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 900px) 50vw, 360px" "widths" (slice 400 600 800)) }}
       </div>
     {{ end }}
   </div>
