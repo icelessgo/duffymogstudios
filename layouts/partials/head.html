@@ -1,4 +1,5 @@
-{{ $ogImg := (resources.Get "images/couple-swoop.jpg").Resize "1200x webp q90" }}
+{{ $ogImg := (resources.Get "images/darver-castle-wedding-blue-hour-veil.jpg").Resize "1200x webp q90" }}
+{{ with .Params.ogImage }}{{ $ogImg = (resources.Get (printf "images/%s" .)).Resize "1200x webp q90" }}{{ end }}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>

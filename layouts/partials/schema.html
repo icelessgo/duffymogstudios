@@ -33,7 +33,16 @@
   },
   "sameAs": [
     "https://instagram.com/duffymogstudios"
-  ]
+  ]{{ with .Site.Params.phone }},
+  "telephone": "{{ . }}"{{ end }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}"
 }
 </script>
 <script type="application/ld+json">
@@ -86,6 +95,7 @@
   "headline": {{ .Title | jsonify }},
   "description": {{ .Description | jsonify }},
   "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  {{ with .Params.ogImage }}"image": "{{ (resources.Get (printf "images/%s" .)).Permalink }}",{{ end }}
   "author": {
     "@type": "Person",
     "name": "Gabriela Duffy"

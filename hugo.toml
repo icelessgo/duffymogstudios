@@ -4,6 +4,9 @@ title = "Duffymog Studios"
 
 [params]
   description = "Wedding Photographer Dublin & Ireland"
+  # phone = "+353XXXXXXXXX"  # Set this to enable telephone in LocalBusiness schema
+
+disableKinds = ["taxonomy", "term"]
 
 [imaging]
   quality = 80
