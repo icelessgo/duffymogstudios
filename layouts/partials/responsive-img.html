@@ -8,19 +8,19 @@
     fetchpriority  string   "high", "low", or "auto" (optional)
     sizes          string   CSS sizes attribute
     class          string   Optional CSS class
-    widths         []int    Widths to generate — default: [400 800 1400]
+    widths         []int    Widths to generate — default: [400 800]
 */}}
 {{ $src    := .src }}
 {{ $alt    := .alt }}
 {{ $load   := .loading | default "lazy" }}
 {{ $fp     := .fetchpriority | default "" }}
 {{ $class  := .class | default "" }}
-{{ $sizes  := .sizes  | default "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px" }}
-{{ $widths := .widths | default (slice 400 800 1400) }}
+{{ $sizes  := .sizes  | default "(max-width: 900px) 50vw, 360px" }}
+{{ $widths := .widths | default (slice 400 800) }}
 
 {{ $img := resources.Get (printf "images/%s" $src) }}
 {{ if $img }}
-  {{ $fallback := $img.Resize "800x webp q90" }}
+  {{ $fallback := $img.Resize "400x webp q90" }}
   {{ $parts := slice }}
   {{ range $widths }}
     {{ $r := $img.Resize (printf "%dx webp q90" .) }}
