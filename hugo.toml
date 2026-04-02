@@ -6,7 +6,7 @@ title = "Duffymog Studios"
   description = "Wedding Photographer Dublin & Ireland"
 
 [imaging]
-  quality = 90
+  quality = 80
 
 [imaging.exif]
   disableLatLong = true

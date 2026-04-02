@@ -14,7 +14,18 @@
       "Bash(cp \"Grooms_Cinema.jpg\" \"two-grooms-cinema-portrait-ireland.jpg\")",
       "Bash(cp \"Gabriela-Rapeseed-Field.jpg\" \"gabriela-duffy-wedding-photographer-ireland.jpg\")",
       "Bash(cp \"GuestsLaughing.jpg\" \"wedding-guests-candid-moment-ireland.jpg\")",
-      "Bash(cp \"A-B-1-5.jpg\" \"couple-golden-hour-embrace-ireland.jpg\")"
+      "Bash(cp \"A-B-1-5.jpg\" \"couple-golden-hour-embrace-ireland.jpg\")",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)",
+      "Bash(git:*)",
+      "Bash(grep:*)",
+      "Bash(ls /home/conor/Duffymogstudios/static/images/*.webp)",
+      "Bash(xargs -I{} basename {})",
+      "Bash(identify -format \"%wx%h\" /home/conor/Duffymogstudios/static/images/DuffymogStudios_Logo.png)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//home/conor/Duffymogstudios/**)",
+      "Bash(done)"
     ]
   }
 }
