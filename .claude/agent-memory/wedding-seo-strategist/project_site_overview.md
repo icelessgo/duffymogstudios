@@ -46,35 +46,40 @@ type: project
 - `layouts/partials/services.html` — 3 service cards with real images
 - `layouts/partials/responsive-img.html` — generates WebP srcset from assets/images/
 
-## Known SEO Issues (as of 2026-04-02)
+## Known SEO Issues (as of 2026-04-02) — updated after full audit
 - OG image hardcoded to couple-swoop.jpg for ALL pages — not page-specific
 - Schema image also hardcoded to couple-swoop.jpg
-- Sitemap was built against localhost:1313 (not production URL) — all locs show http://localhost:1313/
-- Sitemap includes tag taxonomy pages (/tags/, /tags/news/, etc.) which dilute crawl budget
-- hugo.toml title is just "Duffymog Studios" with no keyword — used as site title fallback
-- homepage title tag renders as "Wedding Photographer Dublin & Ireland | Duffymog Studios" — good
-- Non-homepage pages use page Title only (e.g. "About Gabriela — Duffymog Studios") — some titles lack keywords
-- Contact page meta description is thin ("Get in touch with Duffymog Studios to book your wedding photography in Dublin and across Ireland.")
+- Sitemap built against localhost:1313 — confirmed in public/sitemap.xml, all locs show http://localhost:1313/ — CRITICAL
+- Sitemap includes /tags/, /tags/news/, /categories/ taxonomy pages — crawl budget dilution
+- hugo.toml title is just "Duffymog Studios" — used as fallback; homepage title renders correctly via _index.md
+- /pricing/ page H1 is just "Pricing" — weak, not keyword-rich
+- /weddings/ page H1 is just "The Gallery" — not keyword-rich
+- /about/ H1 is "Hi, I'm Gabriela. Half Spanish, fully obsessed with photography." — no keyword
+- Contact page and blog/_index.md have no specific H1 (blog list uses .Title from frontmatter)
 - No BreadcrumbList schema on any page
-- No SiteNavigationElement or WebSite schema with sitelinks searchbox
-- Blog single template (single.html) has no featured image in the article — no og:image override per post
-- Blog posts have no images embedded in the content — text only
+- No WebSite schema (sitelinks searchbox opportunity)
+- Blog single template (single.html) has no featured image — no og:image override per post
 - Blog Article schema missing image field
-- The "welcome" blog post has no SEO value — just an announcement, no keywords
-- National Gallery blog post has no actual photos embedded in it
-- /weddings/ gallery page H1 is just "The Gallery" — not keyword-rich
-- /about/ page H1 is "Hi, I'm Gabriela. Half Spanish, fully obsessed with photography." — misses keyword opportunity in heading
-- FAQ page has H1 "Wedding Photography FAQs" — good
-- No sitemap priority or changefreq hints configured
-- No schema markup on /weddings/ gallery page
-- No schema markup on /about/ page
-- Logo in nav/footer uses static file (not processed by Hugo Pipes) — no width/height optimisation
-- Blog index list template has no featured images on post cards
-- Internal link from nav missing: FAQ not in nav (only in footer)
-- No location/venue-specific landing pages (e.g. /weddings/darver-castle/, /weddings/dublin/)
+- Blog posts have no photos embedded in content (both posts are text-only)
+- National Gallery blog post has no photos despite being a photo showcase
+- "welcome" blog post has zero SEO value — just an announcement
+- No schema markup on /weddings/ or /about/ pages
+- Blog index list.html has no featured images on post cards
+- FAQ not in nav (only in footer) — reduces internal linking equity to /faq/
+- No location/venue-specific landing pages
 - No elopement-specific landing page
-- No Irish language hreflang (not needed but noted)
-- Google Business Profile status: unknown
+- Filenames with special chars still in assets/images/: Grooms&Dogs.jpg, Grooms&Dogs2.jpg, Grooms_Cinema.jpg — risk in some environments
+- BROKEN REFERENCES in weddings/list.html: two-grooms-cinema-portrait-ireland.jpg (missing — Grooms_Cinema.jpg exists), H-G-7.jpg (missing), A-B-1-5.jpg (missing), A-B-1-6.jpg (missing)
+- BROKEN REFERENCE in about/list.html: GuestsLaughing.jpg (missing from assets/images/)
+- gallery.html slot 4 uses Dancefloor3.jpg but alt says "Bride with bridesmaids" — wrong, Dancefloor3 is groom with microphone
+- hero.html hero-img-1 carousel: IMG_3633.jpg alt says "Couple embracing during golden hour" — generic
+- hero.html hero-img-2: Dancefloor3.jpg alt says "First dance under fairy lights" — wrong (it's the groom mic shot)
+- hero.html hero-img-3: Grooms_Cinema.jpg has problematic filename character (_) — low risk but noted
+- Local business schema has no telephone number field
+- Local business schema has no openingHours field
+- Local business schema sameAs only has Instagram — no Google Business Profile, Facebook, etc.
+- No WebPage schema on key commercial pages (/weddings/, /pricing/)
+- robots.txt is correct — points to production sitemap URL (production sitemap itself is the problem)
 
 ## Content Gaps
 - Only 2 blog posts — major gap vs competitors
@@ -83,3 +88,23 @@ type: project
 - No elopement-specific page beyond pricing section
 - No engagement photography dedicated page
 - No real wedding story posts with photos
+- Same-sex couples coverage strong in portfolio but zero dedicated content or page
+- No Spanish-language content despite Gabriela being a native Spanish speaker (local differentiator)
+- No "how to choose a wedding photographer" or buyer education content
+
+## Template Architecture (confirmed 2026-04-02)
+- layouts/_default/list.html — blog index template (no featured images on cards)
+- layouts/_default/single.html — blog post template (no featured image, no schema image field)
+- layouts/about/list.html — full about page (H1 has no keyword)
+- layouts/weddings/list.html — full gallery with 48 shuffled images; 4 broken file references
+- layouts/pricing/list.html — full pricing page (H1 is just "Pricing")
+- layouts/faq/list.html — FAQ page (H1 is "Wedding Photography FAQs" — good)
+- layouts/contact/ — no dedicated layout file found; uses contact-form partial inline
+
+## Image Asset Status (2026-04-02)
+- 48 files in assets/images/
+- 4 files referenced in templates but MISSING from assets/images/: two-grooms-cinema-portrait-ireland.jpg, H-G-7.jpg, A-B-1-5.jpg, A-B-1-6.jpg
+- 1 file referenced in about/list.html but MISSING: GuestsLaughing.jpg
+- Grooms_Cinema.jpg exists and works fine despite underscore in filename
+- Grooms&Dogs.jpg and Grooms&Dogs2.jpg exist and are used in hero carousel
+- OG image source (couple-swoop.jpg) confirmed present in assets/images/

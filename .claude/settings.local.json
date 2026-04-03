@@ -25,7 +25,10 @@
       "Bash(for f:*)",
       "Bash(do echo:*)",
       "Read(//home/conor/Duffymogstudios/**)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash([ -f \"/home/conor/Duffymogstudios/assets/images/$img\" ])",
+      "Bash(identify /home/conor/Duffymogstudios/assets/images/CA-884.jpg)",
+      "Bash(identify:*)"
     ]
   }
 }
