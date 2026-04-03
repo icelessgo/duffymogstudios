@@ -28,7 +28,7 @@
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
-<meta name="theme-color" content="#C83A32">
+<meta name="theme-color" content="{{ if or (eq .Section "family") (eq .Section "family-pricing") }}#7A8B6F{{ else }}#C83A32{{ end }}">
 
 <!-- Fonts: preconnect + preload CSS to break chain -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
