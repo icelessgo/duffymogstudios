@@ -2,9 +2,9 @@
 
 ## Needs content from you
 
-- [ ] **Intro section image** — replace the placeholder text in `layouts/partials/intro.html` with a real photo of Gabriela
-- [ ] **Review pricing page** — confirm packages, prices, and inclusions are final
-- [ ] **Blog posts** — write 2-3 posts for SEO (venue features, behind-the-scenes, tips). Structure is already set up at `/content/blog/`
+- [x] **Intro section image** — replace the placeholder text in `layouts/partials/intro.html` with a real photo of Gabriela
+- [x] **Review pricing page** — confirm packages, prices, and inclusions are final
+- [x] **Blog posts** — write 2-3 posts for SEO (venue features, behind-the-scenes, tips). Structure is already set up at `/content/blog/`
 
 ## Technical (ready to activate)
 
