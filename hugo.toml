@@ -3,7 +3,7 @@ languageCode = "en-ie"
 title = "Duffymog Studios"
 
 [params]
-  description = "Wedding Photographer Dublin & Ireland"
+  description = "Wedding & Family Photographer Dublin & Ireland"
   # phone = "+353XXXXXXXXX"  # Set this to enable telephone in LocalBusiness schema
 
 disableKinds = ["taxonomy", "term"]
