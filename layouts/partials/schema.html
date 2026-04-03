@@ -57,11 +57,39 @@
     "name": "Gabriela Duffy",
     "jobTitle": "Wedding Photographer"
   },
-  "serviceType": ["Wedding Photography", "Elopement Photography", "Engagement Photography"],
+  "serviceType": ["Wedding Photography", "Elopement Photography", "Engagement Photography", "Family Photography", "Newborn Photography", "Maternity Photography"],
   "areaServed": {
     "@type": "Country",
     "name": "Ireland"
   }
+}
+</script>
+{{ end }}
+
+{{ if eq .Section "family" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Duffymog Studios — Family Photography",
+  "description": "Natural, relaxed family, newborn, and maternity photography in Dublin and across Ireland by Gabriela Duffy.",
+  "url": "{{ .Permalink }}",
+  "provider": {
+    "@type": "Person",
+    "name": "Gabriela Duffy",
+    "jobTitle": "Family & Newborn Photographer"
+  },
+  "serviceType": ["Family Photography", "Newborn Photography", "Maternity Photography"],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Ireland"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dublin",
+    "addressCountry": "IE"
+  },
+  "priceRange": "€350-€650"
 }
 </script>
 {{ end }}

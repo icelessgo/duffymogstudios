@@ -1,0 +1,21 @@
+---
+title: "Family Photography Packages & Pricing Dublin | Duffymog Studios"
+description: "Simple, honest pricing for family, newborn, and maternity photography sessions in Dublin and Ireland. No hidden fees — just beautiful, natural photographs of your family."
+faq:
+  - question: "Where do family sessions take place?"
+    answer: "I shoot in locations that feel natural to your family — your home, a favourite park, the beach, Dublin's Georgian squares, or anywhere that has meaning for you. For newborn sessions, I always recommend your home — baby is most comfortable there, and the photos feel genuinely personal."
+  - question: "What should we wear?"
+    answer: "Wear what makes you feel like yourselves. I'll send you a simple style guide after booking, but the short version is: coordinate loosely (soft, neutral tones work beautifully), skip the logos, and prioritise comfort — especially for little ones."
+  - question: "My kids won't sit still. Is that a problem?"
+    answer: "Not even slightly. Running, climbing, giggling, sulking — that's real life, and real life makes the best photographs. I work in a completely candid, documentary style. No forced poses, no 'say cheese.' The best family photos happen when everyone forgets the camera is there."
+  - question: "How long until we get our photos?"
+    answer: "Your private online gallery will be ready within 3–4 weeks. You'll receive all images professionally edited, in full resolution, with no watermarks and full print rights."
+  - question: "When is the best time for a newborn session?"
+    answer: "The first two weeks are ideal — babies are sleepiest and curliest during this time. But honestly, I've photographed beautiful newborn sessions at 3, 4, even 6 weeks. Don't stress about timing — we'll make it work whenever you're ready."
+  - question: "Can we include pets?"
+    answer: "Absolutely. Dogs, cats, the family goldfish — everyone is welcome. Some of my favourite family photos have four-legged family members in them."
+  - question: "What's included in the price?"
+    answer: "Every session includes the shoot itself, professional editing of all images, a private online gallery, full-resolution digital files, and full print rights. No watermarks, no hidden fees. Prints and albums are available as optional extras."
+  - question: "Do you travel outside Dublin?"
+    answer: "Yes! Greater Dublin Area travel is included in all packages. For locations further afield, I'm happy to travel anywhere in Ireland — just get in touch and we'll work it out."
+---
