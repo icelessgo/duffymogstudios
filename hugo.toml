@@ -5,6 +5,7 @@ enableGitInfo = true
 
 [params]
   description = "Wedding & Family Photographer Dublin & Ireland"
+  google_site_verification = ""  # Paste your Google Search Console verification code here
   # phone = "+353XXXXXXXXX"  # Set this to enable telephone in LocalBusiness schema
 
 [related]
