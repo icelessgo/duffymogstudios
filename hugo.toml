@@ -5,8 +5,6 @@ title = "Duffymog Studios"
 [params]
   description = "Wedding & Family Photographer Dublin & Ireland"
   # phone = "+353XXXXXXXXX"  # Set this to enable telephone in LocalBusiness schema
-  googleRatingValue = 5.0
-  googleReviewCount = 29
 
 disableKinds = ["taxonomy", "term"]
 
