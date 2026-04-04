@@ -1,12 +1,22 @@
 baseURL = "https://www.duffymogstudios.ie/"
 languageCode = "en-ie"
 title = "Duffymog Studios"
+enableGitInfo = true
 
 [params]
   description = "Wedding & Family Photographer Dublin & Ireland"
   # phone = "+353XXXXXXXXX"  # Set this to enable telephone in LocalBusiness schema
 
-disableKinds = ["taxonomy", "term"]
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 [imaging]
   quality = 80

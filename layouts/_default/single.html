@@ -2,10 +2,13 @@
 <article class="blog-post">
   <h1>{{ .Title }}</h1>
   <div class="post-meta">{{ .Date.Format "2 January 2006" }}</div>
+  {{ with .Params.tags }}<div class="tag-pills">{{ range . }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}/" class="tag-pill">{{ . | humanize }}</a>{{ end }}</div>{{ end }}
   <div class="post-content">
     {{ .Content }}
   </div>
+  {{ partial "share-buttons.html" . }}
   <a href="{{ "blog/" | relURL }}" class="back-link">← Back to Blog</a>
 </article>
+{{ partial "related-posts.html" . }}
 {{ partial "contact-form.html" (dict "page" .) }}
 {{ end }}

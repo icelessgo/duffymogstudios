@@ -1,0 +1,7 @@
+name = "duffymog-oauth"
+main = "index.js"
+compatibility_date = "2025-09-27"
+
+# After deploying, set secrets via:
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET

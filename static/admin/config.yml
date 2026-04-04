@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: icelessgo/duffymogstudios
+  branch: main
+  base_url: https://duffymog-oauth.YOUR_SUBDOMAIN.workers.dev  # UPDATE: replace with your actual Worker URL after deploying oauth-worker/
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    filter: { field: "title", pattern: "^(?!Wedding Photography Blog$)" }
+    editor:
+      preview: false
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: true
+        required: false
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        hint: "SEO description for search results. Keep under 160 characters."
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+        allow_multiple: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["wedding"]
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        default: ["Gabriela"]
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
