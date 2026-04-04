@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<section class="pricing-hero reveal">
+  <div class="pricing-hero-inner">
+    <span class="pricing-kicker handwritten">Dublin & all of Ireland</span>
+    <h1>{{ .Title }}</h1>
+    <p>Based in Dublin, travelling nationwide. Wherever your wedding is, I'll be there — no travel fees within Ireland.</p>
+  </div>
+</section>
+
+<section class="area-list reveal">
+  <div class="area-list-inner">
+    {{ range .Pages.ByTitle }}
+    <a href="{{ .RelPermalink }}" class="area-list-card">
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Description | truncate 120 }}</p>
+      <span class="card-link">Read More →</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "contact-form.html" . }}
+
+{{ end }}

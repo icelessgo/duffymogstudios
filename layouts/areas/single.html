@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<section class="area-hero reveal">
+  <div class="area-hero-inner">
+    <span class="area-kicker handwritten">{{ with .Params.kicker }}{{ . }}{{ else }}Dublin & all of Ireland{{ end }} ✦</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+    <div class="hero-buttons" style="justify-content: center; margin-top: 28px;">
+      <a href="/contact/" class="btn btn-primary">Check Your Date ✦</a>
+      <a href="/pricing/" class="btn btn-outline">See Packages</a>
+    </div>
+  </div>
+</section>
+
+<article class="area-content reveal">
+  <div class="area-content-inner">
+    {{ .Content }}
+  </div>
+</article>
+
+<section class="area-cta reveal">
+  <div class="area-cta-inner">
+    <h2>Ready to Book Your {{ with .Params.area }}{{ . }}{{ else }}Wedding{{ end }} Photographer?</h2>
+    <p>I'd love to hear about your plans. Whether you've already booked your venue or you're just starting to look — get in touch and let's chat.</p>
+    <div class="hero-buttons" style="justify-content: center; margin-top: 24px;">
+      <a href="/contact/" class="btn btn-primary">Get in Touch ✦</a>
+      <a href="/weddings/" class="btn btn-outline">See Our Work</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "contact-form.html" . }}
+
+{{ end }}

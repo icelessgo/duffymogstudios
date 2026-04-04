@@ -66,6 +66,34 @@
 </script>
 {{ end }}
 
+{{ if eq .Section "areas" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Duffymog Studios — {{ with .Params.area }}{{ . }}{{ end }} Wedding Photography",
+  "description": {{ .Description | jsonify }},
+  "url": "{{ .Permalink }}",
+  "provider": {
+    "@type": "Person",
+    "name": "Gabriela Duffy",
+    "jobTitle": "Wedding Photographer"
+  },
+  "serviceType": ["Wedding Photography", "Elopement Photography"],
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "{{ with .Params.area }}{{ . }}{{ end }}, Ireland"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dublin",
+    "addressCountry": "IE"
+  },
+  "priceRange": "€600-€2,100"
+}
+</script>
+{{ end }}
+
 {{ if eq .Section "family" }}
 <script type="application/ld+json">
 {
