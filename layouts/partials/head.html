@@ -1,4 +1,4 @@
-{{ $ogImg := (resources.Get "images/darver-castle-wedding-blue-hour-veil.jpg").Resize "1200x webp q90" }}
+{{ $ogImg := (resources.Get "images/Weddings/darver-castle-wedding-blue-hour-veil.jpg").Resize "1200x webp q90" }}
 {{ with .Params.ogImage }}{{ $ogImg = (resources.Get (printf "images/%s" .)).Resize "1200x webp q90" }}{{ end }}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
