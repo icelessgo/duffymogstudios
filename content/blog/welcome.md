@@ -2,7 +2,6 @@
 title: "Welcome to the Duffymog Studios Blog"
 date: 2026-03-22
 description: "We're launching our blog — expect wedding stories, behind-the-scenes moments, and tips for planning your big day."
-featured_image: ""
 tags: ["news"]
 ---
 
