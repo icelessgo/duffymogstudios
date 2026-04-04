@@ -18,6 +18,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@duffymogstudios">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ $ogImg.Permalink }}">
@@ -28,6 +29,7 @@
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <meta name="theme-color" content="{{ if or (eq .Section "family") (eq .Section "family-pricing") }}#7A8B6F{{ else }}#C83A32{{ end }}">
 
 <!-- Fonts: preconnect + preload CSS to break chain -->

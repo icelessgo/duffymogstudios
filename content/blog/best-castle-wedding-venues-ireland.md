@@ -114,3 +114,5 @@ There's something about photographing a **castle wedding in Ireland** that never
 If you're planning a castle wedding and want a photographer who knows how to make the most of these extraordinary settings, **[get in touch](/contact/)**. I'd love to hear about your plans and help you create something unforgettable.
 
 **[See our wedding packages](/pricing/)** or **[view our portfolio](/weddings/)** to see what we do.
+
+Many of the castles above are in areas we cover regularly — see our guides for [Louth](/areas/louth/) (Darver Castle), [Mayo](/areas/mayo/) (Ashford Castle), [Clare](/areas/clare/) (Dromoland), [Offaly](/areas/offaly/) (Kinnitty Castle), and [Sligo](/areas/sligo/) (Markree Castle).

@@ -87,3 +87,5 @@ Before signing a contract, make sure you're clear on:
 I'd love to hear about your plans and give you an honest quote based on what you actually need — no pressure, no hard sell. Every couple is different, and your photography package should reflect that.
 
 **[Check out our wedding packages](/pricing/)** or **[get in touch](/contact/)** to start the conversation.
+
+Not sure what to look for? Read our guide on [how to choose a wedding photographer in Ireland](/blog/how-to-choose-wedding-photographer-ireland/). And if you're still looking for venues, check out our [Dublin venue guide](/blog/best-wedding-venues-dublin/) or [castle wedding venues](/blog/best-castle-wedding-venues-ireland/).

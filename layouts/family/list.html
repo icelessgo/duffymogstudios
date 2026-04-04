@@ -97,16 +97,13 @@
     <div class="caveat-sub">all five-star Google reviews ✦</div>
   </div>
   <div class="testimonials-grid">
+    {{ range $.Site.Data.reviews }}
     <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <blockquote>"Gabriela was incredible with our kids — they were shy at first but within minutes they forgot the camera was even there. The photos are so natural and capture our family perfectly. We couldn't be happier."</blockquote>
-      <cite>— Happy Family ✦</cite>
+      <div class="stars">{{ range seq .rating }}★{{ end }}</div>
+      <blockquote>"{{ .text }}"</blockquote>
+      <cite>— {{ .name }} ✦</cite>
     </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <blockquote>"We had an amazing experience with our photographer Gabriela Duffy — she was professional, friendly, and made the whole shoot feel relaxed and fun. The photos turned out absolutely beautiful. Communication was easy from start to finish, and the final images exceeded our expectations."</blockquote>
-      <cite>— Shenia & Brian ✦</cite>
-    </div>
+    {{ end }}
   </div>
   <div class="trust-badges">
     <div class="trust-badge"><span class="badge-icon">⭐</span> All Five-Star Google Reviews</div>

@@ -1,5 +1,5 @@
 ---
-title: "Pricing | Wedding Photography Packages — Duffymog Studios"
+title: "Wedding Photography Packages & Pricing Ireland"
 description: "Wedding photography packages from €1,700. Full day coverage €2,100. Elopements from €600, engagements from €400. Nationwide travel included. No hidden fees."
 faq:
   - question: "What is your style of photography?"
