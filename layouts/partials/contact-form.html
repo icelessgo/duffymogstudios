@@ -97,5 +97,55 @@
 
       <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
     </form>
+
+    <div class="form-success" hidden>
+      <span class="form-success-icon">✦</span>
+      <h3>Message Sent!</h3>
+      <p>Thank you — I'll be in touch within 24 hours. In the meantime, feel free to browse the <a href="{{ if or (eq $variant "family") (eq $variant "simple") }}/family/{{ else }}/weddings/{{ end }}">portfolio</a>.</p>
+    </div>
   </div>
 </section>
+
+<script>
+(function() {
+  var section = document.getElementById('{{ $id }}');
+  if (!section) return;
+  var form = section.querySelector('.contact-form');
+  var intro = section.querySelector('.contact-intro');
+  var success = section.querySelector('.form-success');
+  if (!form || !success) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('.contact-submit');
+    var oldText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    var existing = form.querySelector('.form-error');
+    if (existing) existing.remove();
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if (r.ok) {
+        form.hidden = true;
+        intro.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = oldText;
+      var err = document.createElement('p');
+      err.className = 'form-error';
+      err.textContent = 'Something went wrong — please try again or email me directly.';
+      btn.parentNode.appendChild(err);
+    });
+  });
+})();
+</script>
