@@ -1,13 +1,6 @@
 {{ define "main" }}
 
-<!-- Hero -->
-<section class="pricing-hero reveal">
-  <div class="pricing-hero-inner">
-    <span class="pricing-kicker handwritten">↳ Dublin Wedding Photographer</span>
-    <h1>Hi, I'm Gabriela.<br>Half Spanish, fully obsessed with photography.</h1>
-    <p>Twenty years behind a camera, a lifetime of loving light, and one very strong belief: <strong>your photos should feel like <em>you</em></strong> — not a Pinterest board, not a shot list, not anybody else's idea of perfect.</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "kicker" "↳ Dublin Wedding Photographer" "title" "Hi, I'm Gabriela.<br>Half Spanish, fully obsessed with photography." "description" "Twenty years behind a camera, a lifetime of loving light, and one very strong belief: <strong>your photos should feel like <em>you</em></strong> — not a Pinterest board, not a shot list, not anybody else's idea of perfect.") }}
 
 <!-- Main Story -->
 <section class="about-split reveal">
@@ -98,13 +91,9 @@
     <blockquote>"From the moment we met Gabriela we knew she was the one. She was so calm and fun on the day — we forgot she was even there. The photos are everything we hoped for and more."</blockquote>
     <cite>— Aoife & Ciarán, Glasson Lakehouse ✦</cite>
   </div>
-  <div class="trust-badges">
-    <div class="trust-badge"><span class="badge-icon">⭐</span> All Five-Star Google Reviews</div>
-    <div class="trust-badge"><span class="badge-icon">🛡️</span> Insured up to €6.5M</div>
-    <div class="trust-badge"><span class="badge-icon">🏛️</span> National Gallery Approved</div>
-  </div>
+  {{ partial "trust-badges.html" (dict "variant" "wedding") }}
 </section>
 
-{{ partial "contact-form.html" . }}
+{{ partial "contact-form.html" (dict "page" .) }}
 
 {{ end }}

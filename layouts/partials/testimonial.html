@@ -1,10 +1,18 @@
+{{ $heading := .heading | default "What Couples Say" }}
+{{ $filter := .filter | default "wedding" }}
+{{ $badgeVariant := .badgeVariant | default "wedding" }}
+{{ $reviews := .site.Data.reviews }}
+{{ if $filter }}
+  {{ $reviews = where $reviews "section" $filter }}
+{{ end }}
+{{ if $reviews }}
 <section class="testimonial-section reveal">
   <div class="testimonial-header">
-    <h2>What Couples Say</h2>
+    <h2>{{ $heading }}</h2>
     <div class="caveat-sub">all five-star Google reviews ✦</div>
   </div>
   <div class="testimonials-grid">
-    {{ range where $.Site.Data.reviews "section" "wedding" }}
+    {{ range $reviews }}
     <div class="testimonial-card">
       <div class="stars">{{ range seq .rating }}★{{ end }}</div>
       <blockquote>"{{ .text }}"</blockquote>
@@ -12,9 +20,6 @@
     </div>
     {{ end }}
   </div>
-  <div class="trust-badges">
-    <div class="trust-badge"><span class="badge-icon">⭐</span> All Five-Star Google Reviews</div>
-    <div class="trust-badge"><span class="badge-icon">🛡️</span> Insured up to €6.5M</div>
-    <div class="trust-badge"><span class="badge-icon">🏛️</span> National Gallery Approved</div>
-  </div>
+  {{ partial "trust-badges.html" (dict "variant" $badgeVariant) }}
 </section>
+{{ end }}

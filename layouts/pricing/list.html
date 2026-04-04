@@ -1,13 +1,6 @@
 {{ define "main" }}
 
-<!-- Hero -->
-<section class="pricing-hero reveal">
-  <div class="pricing-hero-inner">
-    <span class="pricing-kicker handwritten">Simple &amp; transparent</span>
-    <h1>Wedding Photography Packages & Pricing</h1>
-    <p>Honest pricing for couples who value real moments over posed perfection. Every package is crafted with care — no hidden fees, no awkward upsells, just beautiful photographs and a great experience.</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "kicker" "Simple &amp; transparent" "title" "Wedding Photography Packages &amp; Pricing" "description" "Honest pricing for couples who value real moments over posed perfection. Every package is crafted with care — no hidden fees, no awkward upsells, just beautiful photographs and a great experience.") }}
 
 <!-- Wedding Packages -->
 <section class="pricing-split reveal">
@@ -151,22 +144,8 @@
   </div>
 </section>
 
-<!-- FAQs -->
-<section class="pricing-faq reveal">
-  <div class="pricing-faq-inner">
-    <h2>Frequently Asked Questions</h2>
-    <div class="caveat-sub">the answers you're looking for ✦</div>
-    <div class="faq-list">
-      {{ range .Params.faq }}
-      <details class="faq-item">
-        <summary class="faq-question">{{ .question }}</summary>
-        <div class="faq-answer"><p>{{ .answer }}</p></div>
-      </details>
-      {{ end }}
-    </div>
-  </div>
-</section>
+{{ partial "faq-section.html" (dict "faqs" .Params.faq) }}
 
-{{ partial "contact-form.html" . }}
+{{ partial "contact-form.html" (dict "page" .) }}
 
 {{ end }}

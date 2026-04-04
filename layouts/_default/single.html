@@ -7,5 +7,5 @@
   </div>
   <a href="{{ "blog/" | relURL }}" class="back-link">← Back to Blog</a>
 </article>
-{{ partial "contact-form.html" . }}
+{{ partial "contact-form.html" (dict "page" .) }}
 {{ end }}

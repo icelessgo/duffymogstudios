@@ -1,12 +1,42 @@
-<section class="contact-section" id="contact-form">
+{{- $page := . -}}
+{{- $variant := "wedding" -}}
+{{- $id := "contact-form" -}}
+{{- $subject := "" -}}
+{{- $kicker := "Let's create something beautiful" -}}
+{{- $description := "Ready to tell your love story? Fill out the form below and I'll be in touch within 24 hours to chat about your big day." -}}
+{{- $placeholder := "Tell me about your day — how you met, what you're dreaming of..." -}}
+{{- with .page }}{{ $page = . }}{{ end -}}
+{{- with .variant }}{{ $variant = . }}{{ end -}}
+{{- with .id }}{{ $id = . }}{{ end -}}
+{{- with .subject }}{{ $subject = . }}{{ end -}}
+{{- if .kicker }}{{ $kicker = .kicker }}{{ end -}}
+{{- if .description }}{{ $description = .description }}{{ end -}}
+{{- if .placeholder }}{{ $placeholder = .placeholder }}{{ end -}}
+
+{{- if and (eq $variant "family") (eq $kicker "Let's create something beautiful") -}}
+  {{- $kicker = "Let's capture your family" -}}
+  {{- $description = "Tell me about your family and what you're looking for — I'll be in touch within 24 hours to chat about your session." -}}
+  {{- $placeholder = "Tell me about your family — ages of kids, any milestones, favourite locations..." -}}
+  {{- $subject = "Family Photography Enquiry" -}}
+{{- end -}}
+
+{{- if and (eq $variant "simple") (eq $kicker "Let's create something beautiful") -}}
+  {{- $kicker = "Let's capture your family" -}}
+  {{- $description = "Ready to book a session? Fill out the form below and I'll be in touch within 24 hours." -}}
+  {{- $placeholder = "Tell me about your family — ages of kids, session type, preferred dates or locations..." -}}
+  {{- $subject = "Family Photography Enquiry — Pricing Page" -}}
+{{- end -}}
+
+<section class="contact-section" id="{{ $id }}">
   <div class="contact-container">
     <div class="contact-intro">
-      <span class="contact-kicker handwritten">Let's create something beautiful</span>
-      {{ if and .IsSection (eq .Section "contact") }}<h1>Get in Touch</h1>{{ else }}<h2>Get in Touch</h2>{{ end }}
-      <p>Ready to tell your love story? Fill out the form below and I'll be in touch within 24 hours to chat about your big day.</p>
+      <span class="contact-kicker handwritten">{{ $kicker }}</span>
+      {{ if and ($page.IsSection) (eq $page.Section "contact") }}<h1>Get in Touch</h1>{{ else }}<h2>Get in Touch</h2>{{ end }}
+      <p>{{ $description }}</p>
     </div>
 
     <form class="contact-form" action="https://formspree.io/f/mreywbbe" method="POST">
+      {{ with $subject }}<input type="hidden" name="_subject" value="{{ . }}">{{ end }}
       <div class="form-row">
         <div class="form-group">
           <label for="first-name">First Name <span class="required">*</span></label>
@@ -29,6 +59,7 @@
         </div>
       </div>
 
+      {{ if eq $variant "wedding" }}
       <div class="form-row">
         <div class="form-group">
           <label for="wedding-date">Wedding Date <span class="required">*</span></label>
@@ -39,10 +70,29 @@
           <input type="text" id="venue" name="venue" placeholder="e.g. Cliff at Lyons">
         </div>
       </div>
+      {{ else if eq $variant "family" }}
+      <div class="form-row">
+        <div class="form-group">
+          <label for="session-type">Session Type <span class="required">*</span></label>
+          <select id="session-type" name="session_type" required class="form-select">
+            <option value="" disabled selected>Choose a session type</option>
+            <option value="family">Family Session</option>
+            <option value="newborn">Newborn Session</option>
+            <option value="maternity">Maternity Session</option>
+            <option value="cake-smash">Cake Smash / Milestone</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferred-date">Preferred Date</label>
+          <input type="date" id="preferred-date" name="preferred_date">
+        </div>
+      </div>
+      {{ end }}
 
       <div class="form-group form-group-full">
         <label for="message">Message <span class="required">*</span></label>
-        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your day — how you met, what you're dreaming of..."></textarea>
+        <textarea id="message" name="message" rows="5" required placeholder="{{ $placeholder }}"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
