@@ -1,0 +1,17 @@
+{{ if eq .Section "blog" }}
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+<section class="related-posts">
+  <h2>You might also like</h2>
+  <div class="related-grid">
+    {{ range . }}
+    <a href="{{ .RelPermalink }}" class="related-card">
+      <h3>{{ .Title }}</h3>
+      <span class="related-date">{{ .Date.Format "2 January 2006" }}</span>
+      <p>{{ .Description | truncate 120 }}</p>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="blog-section">
+  <h1>Browse by Tag</h1>
+  <div class="tag-cloud">
+    {{ range .Data.Terms.Alphabetical }}
+    <a href="{{ .Page.RelPermalink }}" class="tag-pill tag-pill--lg">{{ .Page.Title }} <span class="tag-count">{{ .Count }}</span></a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

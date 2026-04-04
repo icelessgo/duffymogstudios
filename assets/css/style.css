@@ -702,6 +702,87 @@ footer {
 }
 .blog-post .back-link:hover { color: var(--primary-deep); border-color: var(--primary-deep); }
 
+/* Tag pills */
+.tag-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tag-pill {
+  display: inline-block;
+  font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 4px 14px;
+  border: 1.5px solid var(--primary-light);
+  border-radius: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.tag-pill:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.tag-pill--lg { font-size: 15px; padding: 8px 20px; }
+.tag-count {
+  font-size: 12px; font-weight: 400;
+  color: var(--muted);
+  margin-left: 4px;
+}
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.tag-subtitle {
+  text-align: center;
+  font-size: 16px; color: var(--brown);
+  margin-bottom: 32px;
+}
+
+/* Related posts */
+.related-posts {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px 40px;
+}
+.related-posts h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(24px, 3.5vw, 32px);
+  color: var(--charcoal);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.related-card {
+  background: var(--warm-white);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  display: block;
+}
+.related-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(200,58,50,0.12);
+}
+.related-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.related-date {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--primary);
+}
+.related-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--brown);
+  margin-top: 10px;
+}
+@media (max-width: 900px) {
+  .related-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+  .related-posts { padding: 40px 20px; }
+}
+
 /* ===== HAMBURGER MENU ===== */
 .nav-hamburger {
   display: none; cursor: pointer; z-index: 110;
