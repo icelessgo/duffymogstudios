@@ -24,27 +24,13 @@
     "name": "Ireland"
   },
   "priceRange": "€400-€2,100",
-  {{ $reviews := $.Site.Data.reviews }}
-  {{ $count := len $reviews }}
-  {{ $sum := 0 }}
-  {{ range $reviews }}{{ $sum = add $sum .rating }}{{ end }}
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "{{ lang.FormatNumberCustom 1 (div (float $sum) (float $count)) }}",
+    "ratingValue": "{{ .Site.Params.googleRatingValue }}",
     "bestRating": "5",
     "worstRating": "1",
-    "reviewCount": "{{ $count }}"
+    "reviewCount": "{{ .Site.Params.googleReviewCount }}"
   },
-  "review": [
-    {{ range $i, $r := $reviews }}{{ if $i }},{{ end }}
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": {{ .name | jsonify }} },
-      "reviewRating": { "@type": "Rating", "ratingValue": "{{ .rating }}" },
-      "reviewBody": {{ .text | jsonify }}
-    }
-    {{ end }}
-  ],
   "sameAs": [
     "https://instagram.com/duffymogstudios"
   ]{{ with .Site.Params.phone }},
