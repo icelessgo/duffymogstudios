@@ -46,7 +46,7 @@ type: project
 - `layouts/partials/services.html` — 3 service cards with real images
 - `layouts/partials/responsive-img.html` — generates WebP srcset from assets/images/
 
-## Known SEO Issues (as of 2026-04-02) — updated after full audit
+## Known SEO Issues (as of 2026-04-04) — updated after full audit
 - OG image hardcoded to couple-swoop.jpg for ALL pages — not page-specific
 - Schema image also hardcoded to couple-swoop.jpg
 - Sitemap built against localhost:1313 — confirmed in public/sitemap.xml, all locs show http://localhost:1313/ — CRITICAL
@@ -81,16 +81,18 @@ type: project
 - No WebPage schema on key commercial pages (/weddings/, /pricing/)
 - robots.txt is correct — points to production sitemap URL (production sitemap itself is the problem)
 
-## Content Gaps
-- Only 2 blog posts — major gap vs competitors
-- No venue-specific pages
-- No county/region landing pages (Wicklow, Meath, Louth, Westmeath etc.)
-- No elopement-specific page beyond pricing section
+## Content Gaps (updated 2026-04-04)
+- Blog posts: 11 in total (up from 2) — 7 are currently draft (not published)
+- Published: national-gallery-of-ireland, welcome, best-castle-wedding-venues-ireland, best-wedding-venues-dublin, how-much-does-a-wedding-photographer-cost-in-ireland, how-to-choose-wedding-photographer-ireland, how-to-elope-in-ireland (7 published as of 2026-04-04 check, 5 non-draft)
+- Drafts (not yet live): clontarf-castle-wedding-photography, dublin-city-wedding-photography-locations, powerscourt-estate-wedding-photography, wedding-day-timeline-ireland, winter-wedding-photography-ireland
+- No venue-specific pages (blog posts exist for some venues, but no dedicated landing pages)
+- 24 county/area landing pages exist in /areas/ — architecture strong
+- No elopement-specific standalone page
 - No engagement photography dedicated page
 - No real wedding story posts with photos
 - Same-sex couples coverage strong in portfolio but zero dedicated content or page
 - No Spanish-language content despite Gabriela being a native Spanish speaker (local differentiator)
-- No "how to choose a wedding photographer" or buyer education content
+- Areas section not linked in nav or footer — serious internal linking gap; only accessible via direct URL or blog cross-links
 
 ## Template Architecture (confirmed 2026-04-02)
 - layouts/_default/list.html — blog index template (no featured images on cards)
