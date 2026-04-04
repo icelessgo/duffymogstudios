@@ -6,6 +6,7 @@
   <div class="post-content">
     {{ .Content }}
   </div>
+  {{ partial "share-buttons.html" . }}
   <a href="{{ "blog/" | relURL }}" class="back-link">← Back to Blog</a>
 </article>
 {{ partial "related-posts.html" . }}

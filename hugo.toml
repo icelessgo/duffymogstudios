@@ -1,6 +1,7 @@
 baseURL = "https://www.duffymogstudios.ie/"
 languageCode = "en-ie"
 title = "Duffymog Studios"
+enableGitInfo = true
 
 [params]
   description = "Wedding & Family Photographer Dublin & Ireland"
