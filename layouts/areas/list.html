@@ -1,12 +1,6 @@
 {{ define "main" }}
 
-<section class="pricing-hero reveal">
-  <div class="pricing-hero-inner">
-    <span class="pricing-kicker handwritten">Dublin & all of Ireland</span>
-    <h1>{{ .Title }}</h1>
-    <p>Based in Dublin, travelling nationwide. Wherever your wedding is, I'll be there — no travel fees within Ireland.</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "kicker" "Dublin &amp; all of Ireland" "title" .Title "description" "Based in Dublin, travelling nationwide. Wherever your wedding is, I'll be there — no travel fees within Ireland.") }}
 
 <section class="area-list reveal">
   <div class="area-list-inner">
@@ -20,6 +14,6 @@
   </div>
 </section>
 
-{{ partial "contact-form.html" . }}
+{{ partial "contact-form.html" (dict "page" .) }}
 
 {{ end }}

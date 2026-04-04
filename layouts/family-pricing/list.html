@@ -1,13 +1,6 @@
 {{ define "main" }}
 
-<!-- Hero -->
-<section class="pricing-hero reveal">
-  <div class="pricing-hero-inner">
-    <span class="pricing-kicker handwritten">Simple & transparent</span>
-    <h1>Family Photography Packages & Pricing</h1>
-    <p>Honest pricing for families who want real, natural photographs — not stiff studio portraits. Every session is relaxed, fun, and tailored to your family.</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "kicker" "Simple &amp; transparent" "title" "Family Photography Packages &amp; Pricing" "description" "Honest pricing for families who want real, natural photographs — not stiff studio portraits. Every session is relaxed, fun, and tailored to your family.") }}
 
 <!-- Family Sessions -->
 <section class="pricing-split reveal">
@@ -148,63 +141,8 @@
   </div>
 </section>
 
-<!-- FAQs -->
-<section class="pricing-faq reveal">
-  <div class="pricing-faq-inner">
-    <h2>Frequently Asked Questions</h2>
-    <div class="caveat-sub">the answers you're looking for ✦</div>
-    <div class="faq-list">
-      {{ range .Params.faq }}
-      <details class="faq-item">
-        <summary class="faq-question">{{ .question }}</summary>
-        <div class="faq-answer"><p>{{ .answer }}</p></div>
-      </details>
-      {{ end }}
-    </div>
-  </div>
-</section>
+{{ partial "faq-section.html" (dict "faqs" .Params.faq) }}
 
-<!-- Contact -->
-<section class="contact-section" id="family-pricing-contact">
-  <div class="contact-container">
-    <div class="contact-intro">
-      <span class="contact-kicker handwritten">Let's capture your family</span>
-      <h2>Get in Touch</h2>
-      <p>Ready to book a session? Fill out the form below and I'll be in touch within 24 hours.</p>
-    </div>
-
-    <form class="contact-form" action="https://formspree.io/f/mreywbbe" method="POST">
-      <input type="hidden" name="_subject" value="Family Photography Enquiry — Pricing Page">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="first-name">First Name <span class="required">*</span></label>
-          <input type="text" id="first-name" name="first_name" required placeholder="Your first name">
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name <span class="required">*</span></label>
-          <input type="text" id="last-name" name="last_name" required placeholder="Your last name">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="email">Email <span class="required">*</span></label>
-          <input type="email" id="email" name="email" required placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="+353 ...">
-        </div>
-      </div>
-
-      <div class="form-group form-group-full">
-        <label for="message">Message <span class="required">*</span></label>
-        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your family — ages of kids, session type, preferred dates or locations..."></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
-    </form>
-  </div>
-</section>
+{{ partial "contact-form.html" (dict "page" . "variant" "simple" "id" "family-pricing-contact" "subject" "Family Photography Enquiry — Pricing Page" "description" "Ready to book a session? Fill out the form below and I'll be in touch within 24 hours.") }}
 
 {{ end }}

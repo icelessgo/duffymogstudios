@@ -1,0 +1,16 @@
+<section class="pricing-faq reveal">
+  <div class="pricing-faq-inner">
+    {{ if ne .showHeading false }}
+    <h2>{{ with .heading }}{{ . }}{{ else }}Frequently Asked Questions{{ end }}</h2>
+    <div class="caveat-sub">{{ with .subtitle }}{{ . }}{{ else }}the answers you're looking for ✦{{ end }}</div>
+    {{ end }}
+    <div class="faq-list">
+      {{ range .faqs }}
+      <details class="faq-item">
+        <summary class="faq-question">{{ .question }}</summary>
+        <div class="faq-answer"><p>{{ .answer }}</p></div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>

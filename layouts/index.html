@@ -3,7 +3,7 @@
   {{ partial "fun-strip.html" . }}
   {{ partial "services.html" . }}
   {{ partial "gallery.html" . }}
-  {{ partial "testimonial.html" . }}
+  {{ partial "testimonial.html" (dict "site" .Site) }}
   {{ partial "about.html" . }}
-  {{ partial "contact-form.html" . }}
+  {{ partial "contact-form.html" (dict "page" .) }}
 {{ end }}

@@ -1,12 +1,6 @@
 {{ define "main" }}
 
-<section class="pricing-hero reveal">
-  <div class="pricing-hero-inner">
-    <span class="pricing-kicker handwritten">↳ real weddings, real moments</span>
-    <h1>Wedding Photography Portfolio — Ireland</h1>
-    <p>No two weddings are the same — and that's exactly the point. Here's a collection of <strong>real moments from real days</strong> across Ireland. The chaos, the calm, and everything in between.</p>
-  </div>
-</section>
+{{ partial "page-hero.html" (dict "kicker" "↳ real weddings, real moments" "title" "Wedding Photography Portfolio — Ireland" "description" "No two weddings are the same — and that's exactly the point. Here's a collection of <strong>real moments from real days</strong> across Ireland. The chaos, the calm, and everything in between.") }}
 
 {{ $images := $.Site.Data.gallery }}
 
@@ -50,6 +44,6 @@
   </div>
 </section>
 
-{{ partial "contact-form.html" . }}
+{{ partial "contact-form.html" (dict "page" .) }}
 
 {{ end }}
