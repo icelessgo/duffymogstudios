@@ -77,3 +77,5 @@ Having photographed at dozens of venues, here's what I'd suggest:
 I've photographed weddings in venues all across Dublin and beyond. If you're venue-hunting and want a photographer's perspective — or if you've already found your dream venue and need someone to capture the day — I'd love to hear from you.
 
 **[Get in touch](/contact/)** to chat about your plans, or **[see our packages](/pricing/)** to find out more.
+
+Looking for venues outside Dublin? Check out our guides to [wedding photography in Wicklow](/areas/wicklow/), [Meath](/areas/meath/), and [Kildare](/areas/kildare/) — or see [all the areas we cover](/areas/).

@@ -10,6 +10,6 @@ We're so excited to finally have a blog! This is where we'll be sharing **real w
 
 Whether you're freshly engaged, deep in the planning trenches, or just love a good love story — you're in the right place.
 
-Stay tuned for our first full wedding feature coming soon!
+We've already got guides on [how much wedding photography costs in Ireland](/blog/how-much-does-a-wedding-photographer-cost-in-ireland/), the [best wedding venues in Dublin](/blog/best-wedding-venues-dublin/), and [how to elope in Ireland](/blog/how-to-elope-in-ireland/) — with plenty more on the way.
 
 *— Gabriela* ✦

@@ -110,3 +110,5 @@ I absolutely love photographing elopements. There's something incredibly special
 Whether you're coming from across the world or across the city, I'd love to help you plan an elopement that feels completely *you*.
 
 **[Get in touch](/contact/)** to tell me about your plans, or **[explore our packages](/pricing/)** — I offer dedicated elopement packages designed for intimate celebrations.
+
+For more on specific elopement locations, see our area guides: [Kerry](/areas/kerry/) (Ring of Kerry & Killarney), [Galway](/areas/galway/) (Connemara), [Clare](/areas/clare/) (Cliffs of Moher), [Wicklow](/areas/wicklow/) (Glendalough), and [Dublin](/areas/dublin/) (city elopements).

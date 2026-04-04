@@ -106,3 +106,5 @@ Take your time. Look at full galleries. Ask the right questions. And trust your 
 ---
 
 If you'd like to chat about your wedding — no obligation, no pressure — I'd love to hear from you. **[Get in touch](/contact/)** or **[see how I work](/weddings/)** to see if we're a good fit.
+
+Wondering about costs? Our [wedding photographer pricing guide](/blog/how-much-does-a-wedding-photographer-cost-in-ireland/) breaks down exactly what to expect in Ireland. We cover weddings [across the country](/areas/) — from [Dublin](/areas/dublin/) to [Kerry](/areas/kerry/) and everywhere in between.
